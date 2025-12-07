@@ -393,14 +393,14 @@ const QHubPage = () => {
         },
         {
           id: 'sandbox-partners',
-          title: 'Partner Sandbox',
+          title: 'Secured Sandbox',
           description: 'Access secured sandbox environments with niche partners of Qelyx for development and testing.',
           icon: <SandboxIcon />,
           cta: 'Request Access'
         },
         {
           id: 'hosted-environment',
-          title: 'Hosted Development',
+          title: 'Hosted Deployment',
           description: 'Let Qelyx host an environment, develop use cases and create rapid prototypes for you.',
           icon: <CloudIcon />,
           cta: 'Get Started'
@@ -411,20 +411,6 @@ const QHubPage = () => {
           description: 'Contact Qelyx to conduct engaging hackathons for your organisation.',
           icon: <HackathonIcon />,
           cta: 'Organize Hackathon'
-        },
-        {
-          id: 'custom-solutions',
-          title: 'Custom Prototypes & Solutions',
-          description: 'Contact Qelyx to create custom prototypes or solutions tailored to your needs.',
-          icon: <CustomIcon />,
-          cta: 'Request Solution'
-        },
-        {
-          id: 'client-sandbox',
-          title: 'Client Sandbox Setup',
-          description: 'For clients or partners to connect with Qelyx to set up secured sandbox environments.',
-          icon: <ServerIcon />,
-          cta: 'Setup Sandbox'
         }
       ]
     },

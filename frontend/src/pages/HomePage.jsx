@@ -33,7 +33,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="w-full max-w-sm lg:max-w-md flex items-center justify-center">
+            <div className="w-full max-w-sm lg:max-w-md flex items-center justify-center bg-[#F8FAFC] p-4 rounded-lg">
               <img
                 src={QelyxLogoNew}
                 alt="Qelyx logo"

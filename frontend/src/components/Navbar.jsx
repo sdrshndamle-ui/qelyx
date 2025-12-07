@@ -9,12 +9,14 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
       <nav className="max-w-content mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img
-            src={QelyxLogoNew}
-            alt="Qelyx logo"
-            className="h-10 w-auto"
-            loading="eager"
-          />
+          <div className="bg-[#FFFFFF] p-1 rounded">
+            <img
+              src={QelyxLogoNew}
+              alt="Qelyx logo"
+              className="h-10 w-auto"
+              loading="eager"
+            />
+          </div>
           <span className="text-lg font-semibold tracking-tight bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
             Qelyx
           </span>

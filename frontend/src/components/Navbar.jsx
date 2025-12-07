@@ -12,7 +12,7 @@ const Navbar = () => {
           <img
             src={QelyxLogoNew}
             alt="Qelyx logo"
-            className="h-8 w-auto"
+            className="h-10 w-auto"
             loading="eager"
           />
           <span className="text-lg font-semibold tracking-tight bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
@@ -129,30 +129,30 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <div className="lg:hidden border-t border-gray-100 bg-white">
-          <div className="max-w-content mx-auto px-6 py-4 flex flex-col gap-3">
-            <NavLink to="/" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+        <div className="lg:hidden border-t border-gray-100 bg-white max-h-[calc(100vh-5rem)] overflow-y-auto">
+          <div className="max-w-content mx-auto px-6 py-4 flex flex-col gap-4">
+            <NavLink to="/" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Home
             </NavLink>
-            <NavLink to="/why-qelyx" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+            <NavLink to="/why-qelyx" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Why Qelyx
             </NavLink>
-            <NavLink to="/services" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+            <NavLink to="/services" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Services
             </NavLink>
-            <NavLink to="/industries" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+            <NavLink to="/industries" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Industries
             </NavLink>
-            <NavLink to="/team" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+            <NavLink to="/team" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Team
             </NavLink>
-            <NavLink to="/blog" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+            <NavLink to="/blog" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Blog
             </NavLink>
-            <NavLink to="/q-hub" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+            <NavLink to="/q-hub" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Q Hub
             </NavLink>
-            <NavLink to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy">
+            <NavLink to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium text-primary-navy py-2">
               Contact
             </NavLink>
             <Link

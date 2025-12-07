@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import FounderImage from '../assets/Founder Image.PNG';
 
 const TeamPage = () => {
   return (
@@ -28,8 +29,13 @@ const TeamPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8 items-start">
               <div className="md:col-span-1">
-                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-secondary-azure to-accent-aqua rounded-2xl flex items-center justify-center">
-                  <span className="text-6xl text-white font-bold">SD</span>
+                <div className="w-full max-w-md mx-auto">
+                  <img
+                    src={FounderImage}
+                    alt="Qelyx Founder"
+                    className="w-full h-auto rounded-2xl object-cover shadow-lg"
+                    loading="eager"
+                  />
                 </div>
               </div>
               <div className="md:col-span-2">

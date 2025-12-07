@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import QNewVideo from '../assets/Q_New.mp4';
+import QelyxLogoNew from '../assets/Qelyx Logo_New.png';
 
 const HomePage = () => {
   return (
@@ -33,16 +33,12 @@ const HomePage = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="w-full max-w-md">
-              <video
-                src={QNewVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full rounded-2xl shadow-lg"
-                title="Qelyx animated introduction"
-                aria-label="Qelyx animated introduction video"
+            <div className="w-full max-w-sm lg:max-w-md flex items-center justify-center">
+              <img
+                src={QelyxLogoNew}
+                alt="Qelyx logo"
+                className="w-full h-auto"
+                loading="eager"
               />
             </div>
           </div>
@@ -63,7 +59,7 @@ const HomePage = () => {
               Organizations sit on goldmines of untapped potential. While data flows through countless business processes daily, traditional approaches barely scratch the surface of what's possible. By intelligently connecting datasets with the people, processes, and industry contexts that give them meaning, organizations can transform raw information into strategic advantage—meeting regulatory demands more efficiently, delivering superior customer value, powering smarter decisions, and unlocking entirely new revenue streams. The question isn't whether your data holds value. It's whether you're positioned to capture it.
             </p>
           </div>
-          <div className="grid md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
             {[
               { letter: 'Q', title: 'Quality', desc: 'Uncompromising standards in every deliverable' },
               { letter: 'E', title: 'Expertise', desc: 'Deep domain knowledge and technical mastery' },

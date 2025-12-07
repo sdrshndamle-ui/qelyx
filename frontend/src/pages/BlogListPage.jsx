@@ -67,7 +67,7 @@ const BlogListPage = () => {
                 className="block rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-transform duration-300"
                 style={{ backgroundColor: post.color }}
               >
-                <div className="p-8">
+                <div className="p-6 sm:p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="text-xs font-semibold text-white bg-white/20 px-3 py-1 rounded-full">
                       {post.category}
@@ -94,4 +94,5 @@ const BlogListPage = () => {
 };
 
 export default BlogListPage;
+
 

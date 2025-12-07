@@ -20,7 +20,7 @@ const ServicesPage = () => {
       {/* Advisory Section */}
       <section className="py-16">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl font-bold text-white mb-4">Advisory</h2>
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">Advisory</h2>
           <p className="text-gray-300 mb-8 max-w-4xl">
             We help you shape a clear data vision. From strategy to architecture, governance to operating models—our advisory approach ensures your organisation is aligned, future-ready, and optimised for decision-making at scale.
           </p>
@@ -55,7 +55,7 @@ const ServicesPage = () => {
       {/* Innovation Section */}
       <section className="py-16 bg-[#0F1E2E]">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl font-bold text-white mb-4">Insight & Intelligence Innovation</h2>
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">Insight & Intelligence Innovation</h2>
           <p className="text-gray-300 mb-8 max-w-4xl">
             Qelyx brings creativity and technical depth to help you explore what's possible. We prototype, validate and accelerate ideas that create competitive advantage.
           </p>
@@ -92,7 +92,7 @@ const ServicesPage = () => {
       {/* Implementation Section */}
       <section className="py-16">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl font-bold text-white mb-4">Implementation</h2>
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">Implementation</h2>
           <p className="text-gray-300 mb-8 max-w-4xl">
             From engineering to insights and user adoption, we deliver solutions built for scale, resilience and real business value.
           </p>
@@ -130,7 +130,7 @@ const ServicesPage = () => {
       {/* Thought Leadership Section */}
       <section className="py-16 bg-[#0F1E2E]">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl font-bold text-white mb-4">Thought Leadership</h2>
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">Thought Leadership</h2>
           <p className="text-gray-300 mb-4 max-w-4xl">
             We translate complexity into clarity. Qelyx provides perspectives that inspire, educate and shape your organisation's future—through frameworks, workshops, and executive storytelling.
           </p>

@@ -185,7 +185,7 @@ const IndustriesPage = () => {
               <p className="text-xl text-white font-semibold mb-4">{industry.headline}</p>
               <p className="text-gray-300 mb-8">{industry.intro}</p>
               
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-[#1E2A38] rounded-xl p-6">
                   <h4 className="text-lg font-semibold text-white mb-4">Industry Challenges</h4>
                   <ul className="space-y-2">
@@ -236,4 +236,5 @@ const IndustriesPage = () => {
 };
 
 export default IndustriesPage;
+
 

@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 // Demo credentials - In production, use proper backend authentication
 const DEMO_CREDENTIALS = {

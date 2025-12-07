@@ -115,7 +115,7 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="bg-[#1E2A38] rounded-2xl p-8">
+            <div className="bg-[#1E2A38] rounded-2xl p-6 sm:p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">

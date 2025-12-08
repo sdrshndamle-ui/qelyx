@@ -697,11 +697,9 @@ const QHubModalContent = ({ activeModal }) => {
         </p>
         <div className="bg-[#0A1A2F] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Corporate Training Challenge:</h6>
-          <p className="text-gray-400 text-xs leading-relaxed">
+          <p className="text-gray-400 text-xs leading-relaxed mb-3">
             {learningLabsContent.corporateChallenge}
           </p>
-        </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
           <p className="text-gray-400 text-xs leading-relaxed">
             {learningLabsContent.consultingPressures}
           </p>

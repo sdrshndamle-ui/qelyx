@@ -1,6 +1,7 @@
 // QHub Modal Component
 // Handles modal display, form submission, and content rendering
 
+import { useState, useEffect } from 'react';
 import QHubModalContent from './QHubModalContent';
 
 const MODAL_CONFIG = {
@@ -152,15 +153,42 @@ const WIDE_MODAL_IDS = [
   'escrow-payments'
 ];
 
-const QHubModal = ({
-  activeModal,
-  formData,
-  isSubmitting,
-  submitted,
-  onClose,
-  onSubmit,
-  onChange
-}) => {
+const QHubModal = ({ activeModal, closeModal }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    organisation: '',
+    message: '',
+    resume: null,
+    linkedin: '',
+    experience: '',
+    skills: '',
+    availability: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  // Reset form when modal changes
+  useEffect(() => {
+    if (activeModal) {
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        organisation: '',
+        message: '',
+        resume: null,
+        linkedin: '',
+        experience: '',
+        skills: '',
+        availability: '',
+      });
+      setSubmitted(false);
+      setIsSubmitting(false);
+    }
+  }, [activeModal]);
+
   if (!activeModal) return null;
 
   const config = MODAL_CONFIG[activeModal] || {
@@ -169,6 +197,38 @@ const QHubModal = ({
     fields: ['name', 'email', 'message']
   };
   const isWideModal = WIDE_MODAL_IDS.includes(activeModal);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setSubmitted(true);
+    setIsSubmitting(false);
+  };
+
+  const handleClose = () => {
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      organisation: '',
+      message: '',
+      resume: null,
+      linkedin: '',
+      experience: '',
+      skills: '',
+      availability: '',
+    });
+    setSubmitted(false);
+    setIsSubmitting(false);
+    closeModal();
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
@@ -179,7 +239,7 @@ const QHubModal = ({
             <p className="text-gray-400 text-sm mt-1">{config.subtitle}</p>
           </div>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="text-gray-400 hover:text-white p-1"
             aria-label="Close modal"
           >
@@ -199,7 +259,7 @@ const QHubModal = ({
             <h4 className="text-xl font-bold text-white mb-2">Submitted Successfully!</h4>
             <p className="text-gray-300">We'll be in touch with you shortly.</p>
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="mt-6 px-6 py-2 bg-accent-aqua text-white rounded-lg hover:bg-accent-aqua/80 transition"
             >
               Close
@@ -213,7 +273,7 @@ const QHubModal = ({
             )}
 
             {/* Form - Right Side (or full width for other modals) */}
-            <form onSubmit={onSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               {config.fields.map((field) => (
                 <div key={field}>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -223,7 +283,7 @@ const QHubModal = ({
                     <textarea
                       name={field}
                       value={formData[field] || ''}
-                      onChange={onChange}
+                      onChange={handleChange}
                       rows={3}
                       className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary-bright resize-none"
                       placeholder={`Enter ${FIELD_LABELS[field].toLowerCase()}`}
@@ -233,14 +293,14 @@ const QHubModal = ({
                       type="file"
                       name={field}
                       accept=".pdf,.doc,.docx"
-                      onChange={onChange}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-secondary-bright file:text-white file:cursor-pointer"
                     />
                   ) : field === 'experience' ? (
                     <select
                       name={field}
                       value={formData[field] || ''}
-                      onChange={onChange}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white focus:outline-none focus:border-secondary-bright"
                     >
                       <option value="">Select experience</option>
@@ -254,7 +314,7 @@ const QHubModal = ({
                     <select
                       name={field}
                       value={formData[field] || ''}
-                      onChange={onChange}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white focus:outline-none focus:border-secondary-bright"
                     >
                       <option value="">Select availability</option>
@@ -269,7 +329,7 @@ const QHubModal = ({
                       type={field === 'email' ? 'email' : field === 'phone' ? 'tel' : 'text'}
                       name={field}
                       value={formData[field] || ''}
-                      onChange={onChange}
+                      onChange={handleChange}
                       required={['name', 'email'].includes(field)}
                       className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary-bright"
                       placeholder={`Enter ${FIELD_LABELS[field].toLowerCase()}`}

@@ -48,7 +48,7 @@ const QHubModalContent = ({ activeModal }) => {
         </p>
         <div className="space-y-4">
           {careerContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-4">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-4">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -73,13 +73,13 @@ const QHubModalContent = ({ activeModal }) => {
         </p>
         <div className="space-y-4">
           {trainingContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-4">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-4">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
           ))}
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-4 border-l-4 border-accent-aqua">
+        <div className="bg-[#151b2e] rounded-lg p-4 border-l-4 border-accent-aqua">
           <h6 className="text-white font-semibold text-sm mb-1">Flexible Formats</h6>
           <p className="text-gray-400 text-xs leading-relaxed">{trainingContent.flexibleFormats}</p>
         </div>
@@ -114,7 +114,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {trainerContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -145,7 +145,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {contractorContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -182,7 +182,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {rfpContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -213,7 +213,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {bespokeContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -244,7 +244,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {ethicalAiContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -275,7 +275,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {consultingContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -306,7 +306,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {focusedWorkshopsContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -341,7 +341,7 @@ const QHubModalContent = ({ activeModal }) => {
             {architectureReviewContent.modernize}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-2">The Questions That Matter:</h6>
           <ul className="space-y-1">
             {architectureReviewContent.questions.map((question, idx) => (
@@ -354,7 +354,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {architectureReviewContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -385,7 +385,7 @@ const QHubModalContent = ({ activeModal }) => {
         </div>
         <div className="space-y-3">
           {marketResearchContent.features.map((feature, idx) => (
-            <div key={idx} className="bg-[#0A1A2F] rounded-lg p-3">
+            <div key={idx} className="bg-[#151b2e] rounded-lg p-3">
               <h6 className="text-accent-aqua font-semibold text-sm mb-1">{feature.title}</h6>
               <p className="text-gray-400 text-xs leading-relaxed">{feature.text}</p>
             </div>
@@ -408,31 +408,31 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {rapidPrototypesContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">We Do the Heavy Lifting:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {rapidPrototypesContent.heavyLifting}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Speed When You Need It Most:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {rapidPrototypesContent.speed}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Your Prototype, Your Presentation, Your Success:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {rapidPrototypesContent.presentation}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Complete Ownership, Secure Transfer:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {rapidPrototypesContent.ownership}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Partnership Without the Politics:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {rapidPrototypesContent.partnership}
@@ -455,30 +455,30 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {securedSandboxContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Approval Bottleneck:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {securedSandboxContent.bottleneck}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <p className="text-gray-400 text-xs leading-relaxed">
             {securedSandboxContent.consultingChallenges}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Your Solution, Ready Now:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {securedSandboxContent.solution}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Strategic Partner Investments:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {securedSandboxContent.partnerInvestments}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Your Extended Innovation Arm:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {securedSandboxContent.innovationArm}
@@ -498,49 +498,49 @@ const QHubModalContent = ({ activeModal }) => {
         <h4 className="text-xl font-bold bg-gradient-to-r from-secondary-bright to-accent-aqua bg-clip-text text-transparent">
           {hostedDeploymentContent.headline}
         </h4>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Production-Ready, Without the Overhead:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.productionReady}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Faster Time-to-Market:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.fasterTimeToMarket}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Flexible Commercial Models:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.flexibleCommercial}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Multi-Tenancy Made Simple:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.multiTenancy}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">White-Label Opportunities:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.whiteLabel}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Compliance and Governance Assured:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.compliance}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Expert Support When It Matters:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.expertSupport}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Seamless Migration Path:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hostedDeploymentContent.migration}
@@ -563,7 +563,7 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {hackathonsContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Understanding Hackathons:</h6>
           <p className="text-gray-400 text-xs leading-relaxed mb-3">
             {hackathonsContent.understanding}
@@ -572,19 +572,19 @@ const QHubModalContent = ({ activeModal }) => {
             {hackathonsContent.challenges}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Qelyx Approach:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hackathonsContent.approach}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Funded by Partners, Amplified by Marketing:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hackathonsContent.fundedByPartners}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Discover Your Next-Gen Talent:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {hackathonsContent.discoverTalent}
@@ -607,25 +607,25 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {collaborativeSandboxContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Collaboration Gap:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collaborativeSandboxContent.collaborationGap}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Qelyx Community Platform:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collaborativeSandboxContent.platform}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Build at Your Pace, Showcase Your Brilliance:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collaborativeSandboxContent.buildAtPace}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">One Platform, Infinite Possibilities:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collaborativeSandboxContent.onePlatform}
@@ -648,31 +648,31 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {publishIdeasContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Entrepreneur's Dilemma:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {publishIdeasContent.entrepreneursDilemma}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Your Marketplace for Innovation:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {publishIdeasContent.marketplace}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Earn While You Create:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {publishIdeasContent.earnWhileYouCreate}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Protected and Promoted:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {publishIdeasContent.protectedAndPromoted}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Bridge to Entrepreneurship:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {publishIdeasContent.bridgeToEntrepreneurship}
@@ -695,7 +695,7 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {learningLabsContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Corporate Training Challenge:</h6>
           <p className="text-gray-400 text-xs leading-relaxed mb-3">
             {learningLabsContent.corporateChallenge}
@@ -704,25 +704,25 @@ const QHubModalContent = ({ activeModal }) => {
             {learningLabsContent.consultingPressures}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Purpose-Built Learning Environments:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {learningLabsContent.purposeBuilt}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Train on What Matters:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {learningLabsContent.trainOnWhatMatters}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Flexible Access, Measurable Results:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {learningLabsContent.flexibleAccess}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Stay Ahead of the Curve:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {learningLabsContent.stayAhead}
@@ -745,7 +745,7 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {collegeTrainingContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Academic Challenge:</h6>
           <p className="text-gray-400 text-xs leading-relaxed mb-3">
             {collegeTrainingContent.academicChallenge}
@@ -754,25 +754,25 @@ const QHubModalContent = ({ activeModal }) => {
             {collegeTrainingContent.communityBarriers}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Market-Aligned, Career-Focused Training:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collegeTrainingContent.marketAligned}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Flexible Access for All:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collegeTrainingContent.flexibleAccess}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">From Training to Employment:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collegeTrainingContent.trainingToEmployment}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Competitive Edge in a Crowded Market:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {collegeTrainingContent.competitiveEdge}
@@ -795,7 +795,7 @@ const QHubModalContent = ({ activeModal }) => {
         <p className="text-gray-300 text-sm leading-relaxed">
           {escrowPaymentContent.intro}
         </p>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">The Payment Trust Problem:</h6>
           <p className="text-gray-400 text-xs leading-relaxed mb-3">
             {escrowPaymentContent.paymentTrustProblem}
@@ -804,25 +804,25 @@ const QHubModalContent = ({ activeModal }) => {
             {escrowPaymentContent.consultingFirms}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Protected Payments, Proven Performance:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {escrowPaymentContent.protectedPayments}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Trust Through Transparency:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {escrowPaymentContent.trustThroughTransparency}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">We Believe in Earning Your Business:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {escrowPaymentContent.earningBusiness}
           </p>
         </div>
-        <div className="bg-[#0A1A2F] rounded-lg p-3">
+        <div className="bg-[#151b2e] rounded-lg p-3">
           <h6 className="text-accent-aqua font-semibold text-sm mb-1">Peace of Mind, Long-Term Partnership:</h6>
           <p className="text-gray-400 text-xs leading-relaxed">
             {escrowPaymentContent.peaceOfMind}

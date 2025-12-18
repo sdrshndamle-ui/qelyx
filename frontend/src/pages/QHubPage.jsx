@@ -247,50 +247,6 @@ const LabIcon = () => (
 
 const QHubPage = () => {
   const [activeModal, setActiveModal] = useState(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    organisation: '',
-    message: '',
-    resume: null,
-    linkedin: '',
-    experience: '',
-    skills: '',
-    availability: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setSubmitted(true);
-    setIsSubmitting(false);
-  };
-
-  const closeModal = () => {
-    setActiveModal(null);
-    setSubmitted(false);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      organisation: '',
-      message: '',
-      resume: null,
-      linkedin: '',
-      experience: '',
-      skills: '',
-      availability: '',
-    });
-  };
 
   const categories = [
     {
@@ -460,7 +416,7 @@ const QHubPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A1A2F]">
+    <div className="min-h-screen bg-[#0a0f1c]">
       {/* SVG Gradient Definitions */}
       <SvgGradientDefs />
       

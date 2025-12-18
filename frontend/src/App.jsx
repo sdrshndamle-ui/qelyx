@@ -23,10 +23,10 @@ const LoginPage = lazy(() => import('./pages/LoginPage'));
 
 // Loading component for lazy loaded pages
 const PageLoader = () => (
-  <div className="min-h-screen bg-[#0A1A2F] flex items-center justify-center">
+  <div className="min-h-screen bg-[#0a0f1c] flex items-center justify-center">
     <div className="text-center">
-      <div className="w-12 h-12 border-4 border-accent-aqua border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
+      <div className="w-12 h-12 border-4 border-[#00d9ff] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-[#a0aec0]">Loading...</p>
     </div>
   </div>
 );

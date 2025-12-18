@@ -232,7 +232,7 @@ const QHubModal = ({ activeModal, closeModal }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-      <div className={`bg-[#1E2A38] rounded-2xl p-4 sm:p-6 lg:p-8 max-h-[90vh] overflow-y-auto ${isWideModal ? 'max-w-5xl w-full' : 'max-w-lg w-full'}`}>
+      <div className={`bg-[#1c2438] border border-[rgba(255,255,255,0.1)] rounded-2xl p-4 sm:p-6 lg:p-8 max-h-[90vh] overflow-y-auto ${isWideModal ? 'max-w-5xl w-full' : 'max-w-lg w-full'}`}>
         <div className="flex justify-between items-start mb-6">
           <div>
             <h3 className="text-2xl font-bold text-white">{config.title}</h3>
@@ -285,7 +285,7 @@ const QHubModal = ({ activeModal, closeModal }) => {
                       value={formData[field] || ''}
                       onChange={handleChange}
                       rows={3}
-                      className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary-bright resize-none"
+                      className="w-full px-4 py-3 bg-[#151b2e] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary-bright resize-none"
                       placeholder={`Enter ${FIELD_LABELS[field].toLowerCase()}`}
                     />
                   ) : field === 'resume' ? (
@@ -294,14 +294,14 @@ const QHubModal = ({ activeModal, closeModal }) => {
                       name={field}
                       accept=".pdf,.doc,.docx"
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-secondary-bright file:text-white file:cursor-pointer"
+                      className="w-full px-4 py-3 bg-[#151b2e] border border-gray-600 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-secondary-bright file:text-white file:cursor-pointer"
                     />
                   ) : field === 'experience' ? (
                     <select
                       name={field}
                       value={formData[field] || ''}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white focus:outline-none focus:border-secondary-bright"
+                      className="w-full px-4 py-3 bg-[#151b2e] border border-gray-600 rounded-lg text-white focus:outline-none focus:border-secondary-bright"
                     >
                       <option value="">Select experience</option>
                       <option value="0-1">0-1 years</option>
@@ -315,7 +315,7 @@ const QHubModal = ({ activeModal, closeModal }) => {
                       name={field}
                       value={formData[field] || ''}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white focus:outline-none focus:border-secondary-bright"
+                      className="w-full px-4 py-3 bg-[#151b2e] border border-gray-600 rounded-lg text-white focus:outline-none focus:border-secondary-bright"
                     >
                       <option value="">Select availability</option>
                       <option value="immediate">Immediate</option>
@@ -331,7 +331,7 @@ const QHubModal = ({ activeModal, closeModal }) => {
                       value={formData[field] || ''}
                       onChange={handleChange}
                       required={['name', 'email'].includes(field)}
-                      className="w-full px-4 py-3 bg-[#0A1A2F] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary-bright"
+                      className="w-full px-4 py-3 bg-[#151b2e] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary-bright"
                       placeholder={`Enter ${FIELD_LABELS[field].toLowerCase()}`}
                     />
                   )}

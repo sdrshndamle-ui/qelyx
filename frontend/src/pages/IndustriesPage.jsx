@@ -3,232 +3,179 @@ import { Link } from 'react-router-dom';
 const IndustriesPage = () => {
   const industries = [
     {
-      name: 'Retail',
-      headline: 'Empowering Retailers with Intelligent, Data-Driven Experiences',
-      intro: 'Retailers are under pressure to deliver frictionless omnichannel experiences while optimizing margins in a highly volatile market. Qelyx helps retail organizations modernize data foundations and unlock advanced analytics to stay competitive.',
-      challenges: [
-        'Fragmented customer, inventory, and supply chain data',
-        'Inefficient forecasting leading to stockouts or overstock',
-        'Lack of real-time visibility across channels',
-        'Rising operational costs and shrinking margins',
-        'Difficulty building personalized customer engagement'
+      title: 'Retail',
+      description: 'Transform customer experiences and optimize operations with data-driven insights. From customer analytics to supply chain optimization, we help retailers make smarter decisions.',
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+      ),
+      useCases: [
+        'Customer behavior analytics',
+        'Inventory optimization',
+        'Personalized marketing',
+        'Supply chain analytics',
       ],
-      opportunities: [
-        'Unified customer 360 platforms',
-        'Real-time demand forecasting and supply chain analytics',
-        'Dynamic pricing and promotion optimization',
-        'AI-powered customer segmentation and personalization',
-        'Cloud-native data architectures for scalable retail operations'
-      ],
-      differentiators: [
-        'Deep expertise in omnichannel analytics and customer insights',
-        'Proven accelerators for retail demand forecasting',
-        'Experience modernizing legacy POS/ERP data into cloud-native ecosystems',
-        'AI-driven store operations optimization frameworks'
-      ]
     },
     {
-      name: 'Banking & Capital Markets',
-      headline: 'Modernizing Data to Drive Trust, Compliance, and Intelligent Decision Making',
-      intro: 'Financial institutions face heightened regulatory demands, intense competition, and the need for real-time insights. Qelyx enables secure, compliant, and scalable AI-driven data solutions.',
-      challenges: [
-        'Siloed legacy systems and inconsistent data quality',
-        'Complex regulatory reporting requirements',
-        'Fraud risk and cybersecurity threats',
-        'Pressure to deliver hyper-personalized digital banking services',
-        'High cost of manual processes and operations'
+      title: 'Banking & Capital Markets',
+      description: 'Navigate regulatory requirements while driving innovation. Our solutions help financial institutions manage risk, detect fraud, and deliver personalized services.',
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      useCases: [
+        'Risk management & compliance',
+        'Fraud detection & prevention',
+        'Customer analytics',
+        'Regulatory reporting',
       ],
-      opportunities: [
-        'Enterprise data fabric and automated data governance',
-        'AI-enabled risk scoring and fraud detection',
-        'Real-time analytics for trading and portfolio optimization',
-        'Customer personalization using machine learning',
-        'Cloud migration strategies that maintain regulatory compliance'
-      ],
-      differentiators: [
-        'Strong understanding of FCA and global regulatory frameworks',
-        'Secure, compliant data platform modernization expertise',
-        'Proprietary frameworks for risk and fraud analytics',
-        'High-performance cloud architectures designed for financial workloads'
-      ]
     },
     {
-      name: 'Insurance',
-      headline: 'Using Data & AI to Transform Underwriting, Claims, and Customer Experience',
-      intro: 'Insurers must evolve quickly to meet customer expectations and manage risk effectively. Qelyx builds intelligent data ecosystems that enable faster, more accurate decision making.',
-      challenges: [
-        'Manual underwriting processes',
-        'High claims processing time and fraud exposure',
-        'Difficulty leveraging telematics, IoT, and third-party data',
-        'Legacy policy administration systems',
-        'Limited insight into customer behavior and lifetime value'
+      title: 'Insurance',
+      description: 'Leverage data to improve underwriting, claims processing, and customer engagement. Our solutions help insurers operate more efficiently and serve customers better.',
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+      useCases: [
+        'Underwriting optimization',
+        'Claims analytics',
+        'Customer segmentation',
+        'Predictive modeling',
       ],
-      opportunities: [
-        'Automated underwriting powered by predictive analytics',
-        'Fraud detection using machine learning models',
-        'Modern data lakes integrating telematics and external data',
-        'AI-driven claims triage and workflow automation',
-        'Customer 360 platforms for personalized insurance products'
-      ],
-      differentiators: [
-        'Experience integrating multi-source actuarial and telematics data',
-        'Automated underwriting accelerators',
-        'Proven frameworks for claims AI and fraud detection',
-        'Expertise modernizing legacy policy admin data architectures'
-      ]
     },
     {
-      name: 'Health & Life Sciences',
-      headline: 'Improving Patient Outcomes Through Trusted, Interoperable, Data-Driven Systems',
-      intro: 'HLS organizations need data to be accessible, real-time, and compliant. Qelyx helps build modern, secure data ecosystems to support clinical, research, and operational excellence.',
-      challenges: [
-        'Fragmented clinical, operational, and research data',
-        'Strict data privacy and regulatory standards',
-        'Difficulties scaling digital health and remote-care models',
-        'Limited interoperability across EHR and lab systems',
-        'Rising costs and resource shortages'
+      title: 'Health & Life Sciences',
+      description: 'Improve patient outcomes and accelerate research with advanced analytics. From clinical trials to population health, we help healthcare organizations make data-driven decisions.',
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
+      useCases: [
+        'Clinical trial analytics',
+        'Population health management',
+        'Drug discovery support',
+        'Patient outcome prediction',
       ],
-      opportunities: [
-        'Unified patient record platforms and health data interoperability',
-        'Predictive AI for clinical decision support',
-        'Real-time operational analytics for hospitals',
-        'Accelerated drug discovery using ML and knowledge graphs',
-        'Scalable, compliant cloud environments (HIPAA, GDPR, etc.)'
-      ],
-      differentiators: [
-        'Strong focus on data privacy and regulatory compliance',
-        'Expertise integrating EHR, lab, imaging, and clinical datasets',
-        'Accelerators for predictive health analytics and population health insights',
-        'Proven success modernizing data in biotech, pharma, and provider networks'
-      ]
     },
     {
-      name: 'Media & Entertainment',
-      headline: 'Harnessing Data to Personalize Content, Boost Revenue, and Transform Audience Engagement',
-      intro: 'Media organizations rely on real-time insights to deliver personalized content and optimize monetization. Qelyx helps build scalable, AI-driven data ecosystems that power creativity and growth.',
-      challenges: [
-        'Disconnected audience, engagement, and consumption data',
-        'Difficulty scaling personalized content recommendations',
-        'Pressure to optimize ad revenue across fragmented channels',
-        'Piracy, content security, and digital rights challenges',
-        'Need for real-time performance metrics and forecasting'
+      title: 'Media & Entertainment',
+      description: 'Understand audiences and optimize content delivery. Our solutions help media companies personalize experiences, optimize content strategy, and maximize engagement.',
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+      ),
+      useCases: [
+        'Audience analytics',
+        'Content recommendation',
+        'Viewership prediction',
+        'Ad optimization',
       ],
-      opportunities: [
-        'Unified audience analytics and engagement platforms',
-        'AI-driven content recommendation engines',
-        'Marketing attribution and multi-touch analytics',
-        'Rights management and content lifecycle analytics',
-        'Scalable cloud data platforms for media processing and distribution'
-      ],
-      differentiators: [
-        'Expertise in OTT, streaming, publishing, and gaming analytics',
-        'Accelerators for audience intelligence and personalization',
-        'Advanced modeling for ad performance and revenue optimization',
-        'Strong capability in metadata management and content analytics'
-      ]
     },
     {
-      name: 'Public Sector',
-      headline: 'Enabling Efficient, Transparent, and Citizen-Centric Public Services',
-      intro: 'Government organizations need secure, scalable, and trustworthy data ecosystems. Qelyx helps public-sector departments modernize systems and use AI responsibly to improve outcomes for citizens.',
-      challenges: [
-        'Legacy systems with low interoperability',
-        'Data silos preventing effective decision making',
-        'Limited real-time reporting capabilities',
-        'Complexity in managing large-scale public programs',
-        'High expectations for transparency and accountability'
+      title: 'Public Sector',
+      description: 'Deliver better citizen services and improve operational efficiency. Our solutions help government agencies make data-driven policy decisions and optimize service delivery.',
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+      useCases: [
+        'Citizen service optimization',
+        'Policy impact analysis',
+        'Resource allocation',
+        'Performance monitoring',
       ],
-      opportunities: [
-        'Modern, secure government data platforms',
-        'Citizen analytics for service improvement',
-        'Automated compliance, reporting, and case management',
-        'AI for resource planning and workload optimization',
-        'Data governance frameworks to boost data sharing and trust'
-      ],
-      differentiators: [
-        'Experience designing secure, compliant government data platforms',
-        'Expertise in responsible and ethical AI implementation',
-        'Proven frameworks for cross-departmental data interoperability',
-        'Strong understanding of procurement, compliance, and governance'
-      ]
-    }
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A1A2F]">
+    <div className="min-h-screen bg-[#0a0f1c] text-white">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-content mx-auto px-6 lg:px-10">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Where Industry Expertise Meets Data Excellence
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: `
+              radial-gradient(circle at 20% 30%, rgba(0, 217, 255, 0.08), transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.06), transparent 50%)
+            `
+          }}
+        />
+        
+        <div className="relative max-w-content mx-auto px-6 lg:px-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-hero font-extrabold mb-6 text-white">
+              Industries We <span className="bg-gradient-to-r from-[#00d9ff] via-[#00b8d4] to-[#6366f1] bg-clip-text text-transparent">Serve</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Qelyx works at the intersection of strategy, technology, and domain knowledge to deliver tailored data and AI solutions that address each sector's unique challenges and opportunities.
+            <p className="text-body-large text-[#a0aec0] mb-8 max-w-2xl mx-auto leading-relaxed">
+              Industry-specific data and AI solutions tailored to your unique challenges and opportunities
             </p>
           </div>
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-8">
+      {/* Industries Grid */}
+      <section className="py-16 lg:py-24">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Industries We Serve</h2>
-          
-          {industries.map((industry, index) => (
-            <div key={industry.name} className={`mb-16 pb-16 ${index < industries.length - 1 ? 'border-b border-gray-700' : ''}`}>
-              <h3 className="text-2xl font-bold mb-4">
-                <span className="bg-gradient-to-r from-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
-                  {industry.name}
-                </span>
-              </h3>
-              <p className="text-xl text-white font-semibold mb-4">{industry.headline}</p>
-              <p className="text-gray-300 mb-8">{industry.intro}</p>
-              
-              <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-[#1E2A38] rounded-xl p-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">Industry Challenges</h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="card group"
+              >
+                <div className="text-[#00d9ff] mb-4">{industry.icon}</div>
+                <h3 className="text-h3 font-bold text-white mb-3 group-hover:text-[#00d9ff] transition-colors">
+                  {industry.title}
+                </h3>
+                <p className="text-body-small text-[#a0aec0] mb-4 leading-relaxed">
+                  {industry.description}
+                </p>
+                <div className="border-t border-[rgba(255,255,255,0.1)] pt-4">
+                  <p className="text-caption text-[#718096] mb-2 uppercase tracking-wider">Key Use Cases</p>
                   <ul className="space-y-2">
-                    {industry.challenges.map((challenge, i) => (
-                      <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-accent-aqua mt-1">•</span>
-                        {challenge}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-[#1E2A38] rounded-xl p-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">Opportunities</h4>
-                  <ul className="space-y-2">
-                    {industry.opportunities.map((opportunity, i) => (
-                      <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-accent-aqua mt-1">•</span>
-                        {opportunity}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-[#1E2A38] rounded-xl p-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">Qelyx Differentiators</h4>
-                  <ul className="space-y-2">
-                    {industry.differentiators.map((diff, i) => (
-                      <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-accent-aqua mt-1">•</span>
-                        {diff}
+                    {industry.useCases.map((useCase, idx) => (
+                      <li key={idx} className="text-body-small text-[#a0aec0] flex items-start gap-2">
+                        <span className="text-[#00d9ff] mt-1">•</span>
+                        <span>{useCase}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
-              
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-gradient-to-tr from-secondary-bright to-accent-aqua px-6 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition"
-              >
-                Learn More About {industry.name} Solutions
-              </Link>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 bg-[#0f1625]">
+        <div className="max-w-content mx-auto px-6 lg:px-10 text-center">
+          <h2 className="text-section font-extrabold mb-4 text-white">
+            Ready to Transform Your Industry?
+          </h2>
+          <p className="text-body text-[#a0aec0] mb-8 max-w-2xl mx-auto">
+            Let's discuss how our industry-specific solutions can help you achieve your data and AI goals.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="btn-primary"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              to="/services"
+              className="btn-secondary"
+            >
+              Explore Services
+            </Link>
+          </div>
         </div>
       </section>
     </div>
@@ -236,5 +183,3 @@ const IndustriesPage = () => {
 };
 
 export default IndustriesPage;
-
-

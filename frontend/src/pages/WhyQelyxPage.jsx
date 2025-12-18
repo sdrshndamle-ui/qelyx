@@ -1,171 +1,309 @@
 import { Link } from 'react-router-dom';
-import QNewVideo from '../assets/Q_New.mp4';
+import QVideo from '../assets/Q_New.mp4';
 
 const WhyQelyxPage = () => {
-  const pillars = [
+  const valuePillars = [
     {
-      letter: 'Q',
       title: 'Quality',
-      desc: 'We are committed to delivering excellence in every engagement. From data accuracy to solution design, we maintain rigorous standards that ensure our work stands up to scrutiny and delivers lasting value.'
+      description: 'We are committed to delivering excellence in every engagement. From data accuracy to solution design, we maintain rigorous standards that ensure our work stands up to scrutiny and delivers lasting value.',
     },
     {
-      letter: 'E',
       title: 'Expertise',
-      desc: 'Our team brings deep domain knowledge across financial services, healthcare, retail, and more. We combine technical mastery with business acumen to solve complex challenges effectively.'
+      description: 'Our team brings deep domain knowledge across financial services, healthcare, retail, and more. We combine technical mastery with business acumen to solve complex challenges effectively.',
     },
     {
-      letter: 'L',
       title: 'Leadership',
-      desc: 'We guide organizations through transformation with vision and clarity. Our thought leadership helps clients navigate uncertainty and make informed decisions about their data future.'
+      description: 'We guide organizations through transformation with vision and clarity. Our thought leadership helps clients navigate uncertainty and make informed decisions about their data future.',
     },
     {
-      letter: 'Y',
       title: 'Yield',
-      desc: 'We focus on maximizing returns from your data investments. Every initiative is designed to deliver measurable business outcomes and sustainable competitive advantage.'
+      description: 'We focus on maximizing returns from your data investments. Every initiative is designed to deliver measurable business outcomes and sustainable competitive advantage.',
     },
     {
-      letter: 'X',
       title: 'eXecution',
-      desc: 'Strategy without execution is just theory. We pride ourselves on delivering results with precision, speed, and reliability—turning ambitious plans into operational reality.'
-    }
+      description: 'Strategy without execution is just theory. We pride ourselves on delivering results with precision, speed, and reliability—turning ambitious plans into operational reality.',
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A1A2F]">
+    <div className="min-h-screen bg-[#0a0f1c] text-white">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-content mx-auto px-6 lg:px-10">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            The Qelyx Story
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mb-8">
-            We founded Qelyx with a simple belief: organizations deserve a partner who understands both the technical complexity of modern data ecosystems and the business outcomes they're trying to achieve.
-          </p>
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: `
+              radial-gradient(circle at 20% 30%, rgba(0, 217, 255, 0.08), transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.06), transparent 50%)
+            `
+          }}
+        />
+        
+        <div className="relative max-w-content mx-auto px-6 lg:px-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-hero font-extrabold mb-6 text-white">
+              The <span className="bg-gradient-to-r from-[#00d9ff] via-[#00b8d4] to-[#6366f1] bg-clip-text text-transparent">Qelyx Story</span>
+            </h1>
+            <p className="text-body-large text-[#a0aec0] mb-8 max-w-4xl mx-auto leading-relaxed">
+              We founded Qelyx with a simple belief: organizations deserve a partner who understands both the technical complexity of modern data and AI ecosystems and the business outcomes they're trying to achieve. Too often, these worlds exist in silos—technologists who can't speak the language of business, and business leaders left frustrated by solutions that don't deliver. We bridge that divide, combining deep technical mastery with strategic business insight to drive transformation that actually works.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Connected Insights Section */}
-      <section className="py-16 lg:py-20 bg-[#0A1A2F]">
+      <section className="py-16 lg:py-24">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-secondary-bright to-accent-aqua bg-clip-text text-transparent">
+              <h2 className="text-section font-extrabold text-[#00d9ff] mb-6">
                 Connected Insights, Unified Vision
               </h2>
-              <p className="text-gray-300 leading-relaxed">
-                The Qelyx logo tells the story of modern business complexity—and our solution to it.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                Each node represents the reality of your organization: different datasets scattered across departments, multiple stakeholders with varying priorities, diverse business verticals operating in silos, and sectors that rarely communicate effectively. These critical decision points exist in isolation, creating blind spots that limit your strategic potential.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                The connections between nodes represent what we do. At Qelyx, we don't just collect data—we weave it together. We believe in bringing all your decision points into a unified network, creating pathways where insights flow freely across boundaries. When datasets connect, when parties collaborate, when verticals share intelligence—that's when transformation happens.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                The result? Specific, actionable insights tailored to your unique challenges. Not generic dashboards or disconnected reports, but a cohesive intelligence network that empowers confident decision-making across your entire organization.
-              </p>
-              <p className="text-white font-semibold text-lg">
+              <div className="space-y-4 text-body text-[#a0aec0] leading-relaxed">
+                <p>
+                  The Qelyx logo tells the story of modern business complexity—and our solution to it.
+                </p>
+                <p>
+                  Each node represents the reality of your organization: different datasets scattered across departments, multiple stakeholders with varying priorities, diverse business verticals operating in silos, and sectors that rarely communicate effectively. These critical decision points exist in isolation, creating blind spots that limit your strategic potential.
+                </p>
+                <p>
+                  The connections between nodes represent what we do. At Qelyx, we don't just collect data—we weave it together. We believe in bringing all your decision points into a unified network, creating pathways where insights flow freely across boundaries. When datasets connect, when parties collaborate, when verticals share intelligence—that's when transformation happens.
+                </p>
+                <p>
+                  The result? Specific, actionable insights tailored to your unique challenges. Not generic dashboards or disconnected reports, but a cohesive intelligence network that empowers confident decision-making across your entire organization.
+                </p>
+              </div>
+              <p className="text-body-large font-bold text-white mt-8">
                 Qelyx: Where disconnected nodes become connected intelligence.
               </p>
             </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-full max-w-md">
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-md rounded-2xl overflow-hidden">
                 <video
-                  src={QNewVideo}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full rounded-2xl"
-                  title="Qelyx animated logo - Connected nodes representing unified data intelligence"
-                  aria-label="Qelyx animated logo video"
-                />
+                  preload="metadata"
+                  className="w-full h-auto rounded-2xl"
+                  aria-label="Qelyx connected intelligence visualization"
+                >
+                  <source src={QVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy Bar */}
-      <section className="bg-[#1F3044] py-12">
+      {/* Transformation Section */}
+      <section className="py-16 lg:py-24 bg-[#0f1625]">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-gray-300">
-              <p className="mb-4">From ambiguity into clarity</p>
-              <p className="mb-4">From ideas into innovation</p>
-              <p>From insight into action</p>
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+            <div className="space-y-8">
+              <p className="text-body text-white">From ambiguity into clarity</p>
+              <p className="text-body text-white">From ideas into innovation</p>
+              <p className="text-body text-white">From insight into action</p>
             </div>
-            <div className="text-white font-bold">
-              <p className="mb-4">We turn complex data challenges into strategic opportunities</p>
-              <p className="mb-4">We transform raw information into competitive advantage</p>
-              <p>We convert analytics into measurable business results</p>
+            <div className="space-y-8">
+              <p className="text-body font-bold text-white">We turn complex data challenges into strategic opportunities</p>
+              <p className="text-body font-bold text-white">We transform raw information into competitive advantage</p>
+              <p className="text-body font-bold text-white">We convert analytics into measurable business results</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Foundation Section */}
+      {/* Value Pillars Section */}
       <section className="py-16 lg:py-24">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
-            Foundation of Our Approach
-          </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {pillars.map((pillar) => (
-              <div key={pillar.letter} className="bg-[#F5F7FA] rounded-xl p-6 min-h-[200px]">
-                <h3 className="text-2xl font-bold mb-3">
-                  {pillar.letter === 'X' ? (
-                    // Special case for eXecution - 'X' is not at the start
-                    <>
-                      <span className="bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
-                        e
-                      </span>
-                      <span className="text-4xl bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
-                        X
-                      </span>
-                      <span className="bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
-                        ecution
-                      </span>
-                    </>
-                  ) : (
-                    <>
-                      <span className="text-4xl bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
-                        {pillar.letter}
-                      </span>
-                      <span className="bg-gradient-to-r from-primary-legacy via-[#2A6FF4] to-[#15d5d1] bg-clip-text text-transparent">
-                        {pillar.title.slice(1)}
-                      </span>
-                    </>
-                  )}
-                </h3>
-                <p className="text-[#4A4A4A] text-sm leading-relaxed">{pillar.desc}</p>
-              </div>
-            ))}
+          <div className="text-center mb-12">
+            <h2 className="text-section font-extrabold mb-4 text-white">
+              Foundation of Our Approach
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
+            {valuePillars.map((pillar, index) => {
+              const isExecution = pillar.title === 'eXecution';
+              const firstLetter = pillar.title[0];
+              const restOfTitle = pillar.title.slice(1);
+              
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-4 sm:p-6 flex flex-col h-full min-h-[250px] sm:min-h-[280px]"
+                >
+                  <h3 className="text-h3 font-bold mb-3 flex-shrink-0">
+                    {isExecution ? (
+                      <>
+                        <span className="font-extrabold text-[#0a0f1c]">{firstLetter}</span>
+                        <span className="font-extrabold text-[#00b8d4]">{restOfTitle[0]}</span>
+                        <span className="text-[#0a0f1c]">{restOfTitle.slice(1)}</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="font-extrabold text-[#00b8d4]">{firstLetter}</span>
+                        <span className="text-[#0a0f1c]">{restOfTitle}</span>
+                      </>
+                    )}
+                  </h3>
+                  <p className="text-body-small text-[#0a0f1c] leading-relaxed flex-grow">
+                    {pillar.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Partner Section */}
-      <section className="py-16 lg:py-24 bg-[#1E2A38]">
+      <section className="py-16 lg:py-24 bg-[#0f1625]">
         <div className="max-w-content mx-auto px-6 lg:px-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">
+              <h2 className="text-section font-extrabold text-white mb-6">
                 A Partner Who Understands Both Data and Business
               </h2>
             </div>
-            <div>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="space-y-6">
+              <p className="text-body text-white leading-relaxed">
                 We bridge the gap between technical depth and strategic impact—ensuring your data investments don't just launch, but deliver measurable value over the long term. Our team speaks the language of both the boardroom and the data centre, translating complex analytics into actionable business strategy.
               </p>
+              <Link
+                to="/contact"
+                className="btn-primary inline-block"
+              >
+                Start a Conversation
+              </Link>
             </div>
           </div>
-          <div className="mt-12 text-center">
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section className="py-16 lg:py-24">
+        <div className="max-w-content mx-auto px-6 lg:px-10">
+          <div className="text-center mb-12">
+            <h2 className="text-section font-extrabold mb-4 text-white">
+              What we Offer
+            </h2>
+            <p className="text-body text-[#a0aec0] max-w-2xl mx-auto">
+              A strategic, collaborative methodology that delivers results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="card">
+              <h3 className="text-h3 font-bold text-white mb-4">Strategic Advisory</h3>
+              <p className="text-body-small text-[#a0aec0] leading-relaxed mb-4">
+                We begin by understanding your unique challenges and opportunities. Our strategic advisory services help you define clear data and AI objectives aligned with your business goals.
+              </p>
+              <ul className="space-y-2 text-body-small text-[#a0aec0]">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Data & AI strategy development</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Analytics maturity assessment</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Transformation roadmaps</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3 className="text-h3 font-bold text-white mb-4">Innovation & Prototyping</h3>
+              <p className="text-body-small text-[#a0aec0] leading-relaxed mb-4">
+                We rapidly prototype solutions to validate concepts before full-scale implementation. Our innovation services help you test ideas quickly and cost-effectively.
+              </p>
+              <ul className="space-y-2 text-body-small text-[#a0aec0]">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>AI/ML prototypes and POCs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Automation accelerators</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Concept validation</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3 className="text-h3 font-bold text-white mb-4">Expert Implementation</h3>
+              <p className="text-body-small text-[#a0aec0] leading-relaxed mb-4">
+                We turn strategy into reality with expert implementation services. Our engineering teams build modern data platforms and analytics solutions that scale.
+              </p>
+              <ul className="space-y-2 text-body-small text-[#a0aec0]">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Modern data platforms</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Cloud-native engineering</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>MLOps & production AI</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3 className="text-h3 font-bold text-white mb-4">Thought Leadership</h3>
+              <p className="text-body-small text-[#a0aec0] leading-relaxed mb-4">
+                We share knowledge and build capabilities through workshops, training, and community programs. Our thought leadership helps organizations build data literacy and stay ahead.
+              </p>
+              <ul className="space-y-2 text-body-small text-[#a0aec0]">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>CXO Advisory</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Leadership workshops</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#00d9ff] mt-1">•</span>
+                  <span>Data literacy training</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 bg-[#0f1625]">
+        <div className="max-w-content mx-auto px-6 lg:px-10 text-center">
+          <h2 className="text-section font-extrabold mb-4 text-white">
+            Ready to Transform Your Data Strategy?
+          </h2>
+          <p className="text-body text-[#a0aec0] mb-8 max-w-2xl mx-auto">
+            Let's discuss how Qelyx can help accelerate your digital and analytical maturity.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-gradient-to-tr from-secondary-bright to-accent-aqua px-8 py-4 text-base font-semibold text-white shadow-md hover:shadow-lg transition"
+              className="btn-primary"
             >
-              Start a Conversation
+              Get in Touch
+            </Link>
+            <Link
+              to="/services"
+              className="btn-secondary"
+            >
+              Explore Services
             </Link>
           </div>
         </div>
@@ -175,4 +313,3 @@ const WhyQelyxPage = () => {
 };
 
 export default WhyQelyxPage;
-

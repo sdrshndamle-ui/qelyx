@@ -38,6 +38,14 @@ const BlogListPage = () => {
       category: 'Engineering',
       readTime: '9 min read',
     },
+    {
+      id: 'data-products',
+      title: 'Data Products: Turning Data Into a Reusable, Governed, Value-Generating Asset',
+      excerpt: 'Data products apply product thinking to data - so teams can discover, trust, and reuse data safely, at scale.',
+      date: 'December 2025',
+      category: 'Strategy',
+      readTime: '12 min read',
+    },
   ];
 
   const categories = ['All', 'Strategy', 'Engineering', 'Transformation'];

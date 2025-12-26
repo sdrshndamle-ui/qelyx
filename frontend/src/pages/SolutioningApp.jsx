@@ -380,9 +380,21 @@ const pipelineTemplates = [
 
 // Solution Detail Modal
 const SolutionModal = ({ solution, phase, onClose }) => {
+  const [iframeError, setIframeError] = useState(false);
+  
   if (!solution) return null;
 
   const phaseName = typeof phase === 'object' ? (phase.phase || phase.name || 'Solution') : phase || 'Solution';
+
+  // Scroll to top when modal opens
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Also scroll the modal content to top
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+      modalContent.scrollTop = 0;
+    }
+  }, [solution]);
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -408,21 +420,118 @@ const SolutionModal = ({ solution, phase, onClose }) => {
               </div>
             )}
           </div>
-          {solution.demoUrl && !solution.demoUrl.startsWith('/code-assistant') && !solution.demoUrl.startsWith('/code-tracer') && !solution.demoUrl.startsWith('/data-product-designer') && !solution.demoUrl.startsWith('/data-model-analyzer') && (
-            <div className="modal-demo">
-              <h3>Interactive Demo</h3>
-              <div className="demo-container">
-                <iframe 
-                  src={solution.demoUrl} 
-                  title={solution.title}
-                  className="demo-iframe"
-                  allow="fullscreen"
-                  sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          )}
+          {(() => {
+            // Determine iframe source based on solution type
+            let iframeSrc = null;
+            
+            if (solution.demoUrl) {
+              if (solution.demoUrl.startsWith('/code-assistant')) {
+                iframeSrc = 'http://localhost:3000/';
+              } else if (solution.demoUrl.startsWith('/code-tracer')) {
+                iframeSrc = 'http://localhost:3001/';
+              } else if (solution.demoUrl.startsWith('/data-product-designer')) {
+                iframeSrc = 'http://localhost:3002/';
+              } else if (solution.demoUrl.startsWith('/data-model-analyzer')) {
+                iframeSrc = 'http://localhost:5174/';
+              } else {
+                // For other demo URLs (like /demo/...html)
+                iframeSrc = solution.demoUrl;
+              }
+            }
+            
+            if (iframeSrc) {
+              
+              return (
+                <div className="modal-demo" style={{ 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  flex: 1,
+                  minHeight: 0,
+                  marginTop: '24px',
+                  width: '100%',
+                  visibility: 'visible',
+                  opacity: 1,
+                  zIndex: 10
+                }}>
+                  <h3 style={{ color: 'var(--text-primary)', marginBottom: '16px', flexShrink: 0 }}>Interactive Demo</h3>
+                  <div className="demo-container" style={{ 
+                    width: '100%', 
+                    flex: 1,
+                    minHeight: 0,
+                    height: '100%',
+                    border: '1px solid var(--border)', 
+                    borderRadius: '12px', 
+                    overflow: 'hidden',
+                    position: 'relative',
+                    visibility: 'visible',
+                    opacity: 1,
+                    zIndex: 10
+                  }}>
+                    {iframeError ? (
+                      <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        height: '100%',
+                        padding: '40px',
+                        textAlign: 'center',
+                        color: 'var(--text-primary)'
+                      }}>
+                        <p style={{ fontSize: '1.2rem', marginBottom: '16px' }}>
+                          Unable to load the demo
+                        </p>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '24px' }}>
+                          Please make sure the server is running on the correct port.
+                        </p>
+                        <button
+                          onClick={() => {
+                            setIframeError(false);
+                            // Force iframe reload by changing key
+                            const iframe = document.querySelector('.demo-iframe');
+                            if (iframe) {
+                              iframe.src = iframe.src;
+                            }
+                          }}
+                          style={{
+                            padding: '10px 20px',
+                            background: 'var(--primary)',
+                            color: 'var(--text-primary)',
+                            border: 'none',
+                            borderRadius: '8px',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          Retry
+                        </button>
+                      </div>
+                    ) : (
+                      <iframe 
+                        src={iframeSrc} 
+                        title={solution.title}
+                        className="demo-iframe"
+                        allow="fullscreen"
+                        sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals allow-top-navigation"
+                        loading="eager"
+                        onError={() => setIframeError(true)}
+                        onLoad={() => setIframeError(false)}
+                        style={{ 
+                          width: '100%', 
+                          height: '100%', 
+                          border: 'none', 
+                          display: 'block',
+                          visibility: 'visible',
+                          opacity: 1,
+                          zIndex: 10
+                        }}
+                      />
+                    )}
+                  </div>
+                </div>
+              );
+            }
+            return null;
+          })()}
         </div>
         <div className="modal-footer">
           {solution.demoUrl && (
@@ -565,6 +674,16 @@ const PipelineModal = ({ onClose, onCreate, onUpdate, editingPipeline = null }) 
       }
     }
   }, [selectedCategory, editingPipeline]);
+
+  // Scroll to top when pipeline modal opens
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Also scroll the modal content to top
+    const modalContent = document.querySelector('.pipeline-modal');
+    if (modalContent) {
+      modalContent.scrollTop = 0;
+    }
+  }, [editingPipeline]);
 
   return (
     <div className="modal-overlay pipeline-modal-overlay" onClick={onClose}>

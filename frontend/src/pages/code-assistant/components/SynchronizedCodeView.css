@@ -1,0 +1,156 @@
+.synchronized-code-view {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.code-pane-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-pane-card :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.code-pane-card :global(.ant-card-body) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.code-pane {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 16px;
+  background: #020617;
+}
+
+.left-pane {
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.right-pane {
+  border-left: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.code-display {
+  background: #1e1e1e;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d4d4d4;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.code-display code {
+  color: #d4d4d4;
+  white-space: pre;
+}
+
+.output-selector-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.output-selector-header :global(.ant-select) {
+  flex: 1;
+}
+
+.outputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+.output-section {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.output-content {
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.output-content h1,
+.output-content h2,
+.output-content h3 {
+  color: #ffffff;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.output-content h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.output-content h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.output-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.output-content p {
+  margin: 8px 0;
+}
+
+.output-content li {
+  margin: 4px 0;
+  padding-left: 8px;
+  list-style-type: disc;
+  margin-left: 24px;
+}
+
+/* Scrollbar styling for code panes */
+.code-pane::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-pane::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.code-pane::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.3);
+  border-radius: 4px;
+}
+
+.code-pane::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 217, 255, 0.5);
+}

@@ -1,0 +1,68 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Section Wrappers */
+.section-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  overflow: visible;
+}
+
+.section-wrapper:has(.industry-agentic-section) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow: visible;
+}
+
+.comparison-wrapper {
+  /* Further reduce spacing so comparison sits closer to surrounding sections */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 24px 0;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.comparison-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg);
+  z-index: -1;
+}
+
+.badges-wrapper {
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.badges-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg);
+  z-index: -1;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.app > * {
+  animation: fadeIn 0.6s ease-in-out;
+}
+

@@ -1,0 +1,507 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  background: #020617;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(0, 217, 255);
+  font-weight: 600;
+}
+
+p, span, div {
+  color: rgb(0, 217, 255);
+}
+
+.section-container,
+.main-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* Ant Design Overrides */
+.ant-layout {
+  background: #020617;
+  min-height: 100vh;
+}
+
+/* All buttons - light blue */
+.ant-btn-primary {
+  background: rgb(0, 217, 255) !important;
+  color: #000000 !important;
+  border: none !important;
+}
+
+.ant-btn-primary:hover {
+  background: rgba(0, 217, 255, 0.9) !important;
+  color: #000000 !important;
+  filter: brightness(1.1);
+}
+
+.ant-btn-primary:focus {
+  color: #000000 !important;
+}
+
+.ant-btn-primary:active {
+  color: #000000 !important;
+}
+
+.ant-btn-default {
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: rgb(0, 217, 255) !important;
+  border-color: rgb(0, 217, 255) !important;
+}
+
+.ant-btn-default:hover {
+  background: rgba(0, 217, 255, 0.1) !important;
+  color: rgb(0, 217, 255) !important;
+  border-color: rgb(0, 217, 255) !important;
+}
+
+.ant-btn-link {
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-btn-link:hover {
+  color: rgba(0, 217, 255, 0.8) !important;
+}
+
+.ant-btn {
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  transition: all 0.2s ease;
+}
+
+.ant-card:hover {
+  border-color: rgba(0, 217, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-input-number,
+.ant-input-search,
+.ant-input-search .ant-input {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.6) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-input:focus,
+.ant-select-focused .ant-select-selector,
+.ant-input-number:focus,
+.ant-input-search .ant-input:focus {
+  border-color: rgb(0, 217, 255) !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.45) !important;
+}
+
+/* Dropdown menu styles - blue highlights instead of white */
+.ant-select-dropdown {
+  background: rgba(15, 23, 42, 0.98) !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+.ant-select-item {
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-select-item:hover {
+  background: rgba(0, 217, 255, 0.15) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(0, 217, 255, 0.2) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-select-item-option-active {
+  background: rgba(0, 217, 255, 0.15) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+/* Additional select/dropdown overrides for blue highlights */
+.ant-select-selection-item {
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-select-selection-placeholder {
+  color: rgba(0, 217, 255, 0.6) !important;
+}
+
+.ant-select-arrow {
+  color: rgb(0, 217, 255) !important;
+}
+
+/* Ensure all pick-lists (Select components) have blue highlights */
+.ant-picker {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.6) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: rgb(0, 217, 255) !important;
+}
+
+.ant-picker-dropdown {
+  background: rgba(15, 23, 42, 0.98) !important;
+}
+
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  background: rgba(0, 217, 255, 0.2) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-picker-cell:hover .ant-picker-cell-inner {
+  background: rgba(0, 217, 255, 0.15) !important;
+}
+
+/* Tables - dark background */
+.ant-table {
+  background: rgba(15, 23, 42, 0.9) !important;
+}
+
+.ant-table-container {
+  background: rgba(15, 23, 42, 0.9) !important;
+}
+
+.ant-table-thead > tr > th {
+  background: rgba(15, 23, 42, 0.95) !important;
+  color: rgb(0, 217, 255) !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3) !important;
+}
+
+.ant-table-tbody > tr > td {
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(0, 217, 255, 0.1) !important;
+}
+
+.ant-table-tbody > tr.ant-table-row-selected > td {
+  background: rgba(0, 217, 255, 0.15) !important;
+}
+
+.ant-table-tbody > tr.ant-table-row-selected:hover > td {
+  background: rgba(0, 217, 255, 0.2) !important;
+}
+
+/* Remove focus outline that might appear white */
+.ant-table-tbody > tr:focus > td,
+.ant-table-tbody > tr:focus-within > td {
+  background: rgba(15, 23, 42, 0.95) !important;
+}
+
+.ant-pagination-item-active {
+  background: rgba(0, 217, 255, 0.18) !important;
+  border-color: rgb(0, 217, 255) !important;
+}
+
+.ant-pagination-item-active a {
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-modal-content {
+  background: rgba(15, 23, 42, 0.98);
+  border-radius: 16px;
+}
+
+.ant-modal-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.ant-modal-title {
+  color: rgb(0, 217, 255);
+}
+
+.ant-modal-body {
+  color: rgb(0, 217, 255);
+}
+
+/* Ensure modal content doesn't overflow but allows horizontal scroll */
+.ant-modal-content {
+  max-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  width: 100%;
+}
+
+.ant-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  max-height: calc(100vh - 200px);
+  padding: 24px;
+}
+
+/* Ensure table content stays within modal and has horizontal scroll */
+.ant-modal-body .ant-table-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Add visible scrollbar styling */
+.ant-modal-body .ant-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ant-modal-body .ant-table-wrapper::-webkit-scrollbar-track {
+  background: rgba(2, 6, 23, 0.5);
+  border-radius: 4px;
+}
+
+.ant-modal-body .ant-table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.3);
+  border-radius: 4px;
+}
+
+.ant-modal-body .ant-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 217, 255, 0.5);
+}
+
+/* Ensure table cells maintain fixed widths and don't spread */
+.ant-modal-body .ant-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.ant-modal-body .ant-table-tbody > tr > td,
+.ant-modal-body .ant-table-thead > tr > th {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  padding: 8px 12px !important;
+}
+
+/* Reduce padding for more compact columns */
+.ant-modal-body .ant-table-thead > tr > th {
+  padding: 10px 12px !important;
+}
+
+/* Allow description to wrap but still respect width */
+.ant-modal-body .ant-table-tbody > tr > td[data-column-key="description"] {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ant-modal-body .ant-table {
+  min-width: 100%;
+  table-layout: auto;
+}
+
+/* Ensure table cells don't wrap unnecessarily - allow horizontal scroll */
+.ant-modal-body .ant-table-tbody > tr > td,
+.ant-modal-body .ant-table-thead > tr > th {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: ellipsis;
+}
+
+/* Allow description column to show more text */
+.ant-modal-body .ant-table-tbody > tr > td[data-column-key="description"] {
+  white-space: normal;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+/* Ensure Space components don't cause overflow */
+.ant-modal-body .ant-space {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Ensure buttons in table don't overflow */
+.ant-modal-body .ant-table-tbody .ant-btn-link {
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+.ant-tabs-tab {
+  color: rgba(226, 232, 240, 0.78);
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-tabs-ink-bar {
+  background: rgb(0, 217, 255);
+}
+
+/* Tag component - Remove white background, ensure dark backgrounds */
+.ant-tag {
+  border-radius: 4px;
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.ant-tag-cyan {
+  background: rgba(0, 217, 255, 0.15) !important;
+  border-color: rgba(0, 217, 255, 0.4) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-tag-blue {
+  background: rgba(0, 217, 255, 0.15) !important;
+  border-color: rgba(0, 217, 255, 0.4) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+/* Button Group - Remove white highlight from selected buttons */
+.ant-btn-group .ant-btn-primary {
+  background: rgb(0, 217, 255) !important;
+  color: #000000 !important;
+  border-color: transparent !important;
+}
+
+.ant-btn-group .ant-btn-primary:hover {
+  background: rgba(0, 217, 255, 0.9) !important;
+  filter: brightness(1.1) !important;
+  color: #000000 !important;
+}
+
+.ant-btn-group .ant-btn-default {
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: rgb(0, 217, 255) !important;
+  border-color: rgb(0, 217, 255) !important;
+}
+
+.ant-btn-group .ant-btn-default:hover {
+  background: rgba(0, 217, 255, 0.1) !important;
+  color: rgb(0, 217, 255) !important;
+  border-color: rgb(0, 217, 255) !important;
+}
+
+/* Ensure all buttons in button groups have dark backgrounds (default state) */
+.ant-btn-group .ant-btn {
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+/* Primary button in button group - must come after general .ant-btn rule */
+.ant-btn-group .ant-btn-primary,
+.ant-btn-group .ant-btn-primary.ant-btn-primary {
+  background: rgb(0, 217, 255) !important;
+  color: #000000 !important;
+}
+
+/* Message/Notification components - Dark background */
+.ant-message {
+  z-index: 1010;
+}
+
+.ant-message-notice-content {
+  background: rgba(15, 23, 42, 0.98) !important;
+  border: 1px solid rgba(148, 163, 184, 0.3) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.ant-message-success .ant-message-notice-content {
+  border-left: 3px solid #52c41a !important;
+}
+
+.ant-message-error .ant-message-notice-content {
+  border-left: 3px solid #f5222d !important;
+}
+
+.ant-message-warning .ant-message-notice-content {
+  border-left: 3px solid #faad14 !important;
+}
+
+.ant-message-info .ant-message-notice-content {
+  border-left: 3px solid rgb(0, 217, 255) !important;
+}
+
+.ant-message .anticon {
+  color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.ant-message-success .anticon {
+  color: #52c41a !important;
+}
+
+.ant-message-error .anticon {
+  color: #f5222d !important;
+}
+
+.ant-message-warning .anticon {
+  color: #faad14 !important;
+}
+
+.ant-message-info .anticon {
+  color: rgb(0, 217, 255) !important;
+}
+
+/* Notification component - Dark background */
+.ant-notification {
+  z-index: 1010;
+}
+
+.ant-notification-notice {
+  background: rgba(15, 23, 42, 0.98) !important;
+  border: 1px solid rgba(148, 163, 184, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.ant-notification-notice-message {
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-notification-notice-description {
+  color: rgb(0, 217, 255) !important;
+}
+
+.ant-notification-notice-icon-success {
+  color: #52c41a !important;
+}
+
+.ant-notification-notice-icon-error {
+  color: #f5222d !important;
+}
+
+.ant-notification-notice-icon-warning {
+  color: #faad14 !important;
+}
+
+.ant-notification-notice-icon-info {
+  color: rgb(0, 217, 255) !important;
+}
+

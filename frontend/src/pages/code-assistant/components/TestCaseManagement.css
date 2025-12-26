@@ -1,0 +1,88 @@
+.test-case-management {
+  width: 100%;
+}
+
+.test-case-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.test-case-card :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.test-case-table {
+  background: transparent;
+}
+
+.test-case-table :global(.ant-table) {
+  background: transparent;
+}
+
+.test-case-table :global(.ant-table-thead > tr > th) {
+  background: rgba(15, 23, 42, 0.95);
+  color: rgba(226, 232, 240, 0.9);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px;
+}
+
+.test-case-table :global(.ant-table-tbody > tr > td) {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 16px;
+  padding: 16px;
+}
+
+.test-case-table :global(.ant-table-tbody > tr:hover > td) {
+  background: rgba(0, 217, 255, 0.05);
+}
+
+.test-case-summary {
+  width: 100%;
+}
+
+.test-case-modal :global(.ant-modal-header) {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.test-case-modal :global(.ant-modal-title) {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.test-case-modal :global(.ant-modal-body) {
+  background: rgba(15, 23, 42, 0.9);
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.test-case-modal :global(.ant-form-item-label > label) {
+  color: rgba(226, 232, 240, 0.86);
+  font-weight: 500;
+}
+
+.test-case-modal :global(.ant-input),
+.test-case-modal :global(.ant-input-number),
+.test-case-modal :global(.ant-select-selector),
+.test-case-modal :global(.ant-picker-input input),
+.test-case-modal :global(textarea.ant-input) {
+  background: rgba(30, 41, 59, 0.8) !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.test-case-modal :global(.ant-select-selector) {
+  background: rgba(30, 41, 59, 0.8) !important;
+}
+
+.test-case-modal :global(.ant-select-selection-placeholder),
+.test-case-modal :global(.ant-input::placeholder) {
+  color: rgba(148, 163, 184, 0.6) !important;
+}
+

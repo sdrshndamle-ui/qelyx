@@ -1,0 +1,115 @@
+.project-detail-layout {
+  min-height: 100vh;
+  background: #020617;
+}
+
+.project-sidebar {
+  background: rgba(15, 23, 42, 0.9);
+  border-right: 1px solid rgba(148, 163, 184, 0.3);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.source-tech-label {
+  font-size: 12px;
+  color: rgba(148, 163, 184, 0.9);
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.source-tech-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00d9ff;
+}
+
+.project-menu {
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+}
+
+.project-menu :global(.ant-menu-item) {
+  color: rgba(226, 232, 240, 0.95);
+  margin: 4px 16px;
+  border-radius: 6px;
+}
+
+.project-menu :global(.ant-menu-item-selected) {
+  background: rgba(0, 217, 255, 0.3) !important;
+  color: #00d9ff !important;
+  font-weight: 600 !important;
+  border-left: 3px solid #00d9ff !important;
+}
+
+.project-menu :global(.ant-menu-item-selected::after) {
+  display: none !important;
+}
+
+.project-menu :global(.ant-menu-item-selected .ant-menu-title-content) {
+  color: #00d9ff !important;
+}
+
+.project-menu :global(.ant-menu-item:hover) {
+  background: rgba(0, 217, 255, 0.15);
+  color: #00d9ff;
+}
+
+.project-content {
+  margin-left: 250px;
+  padding: 24px;
+  background: #020617;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+.project-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-content::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.project-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.3);
+  border-radius: 4px;
+}
+
+.project-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 217, 255, 0.5);
+}
+
+.object-detail-view {
+  max-width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+}
+
+.object-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.object-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}

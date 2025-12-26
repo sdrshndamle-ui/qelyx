@@ -1,0 +1,46 @@
+.documentation-view {
+  width: 100%;
+}
+
+.documentation-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.documentation-card :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.documentation-content {
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.8;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.documentation-content h1,
+.documentation-content h2,
+.documentation-content h3 {
+  color: #ffffff;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.documentation-content h1 {
+  font-size: 24px;
+}
+
+.documentation-content h2 {
+  font-size: 20px;
+}
+
+.documentation-content h3 {
+  font-size: 16px;
+}
+
+.documentation-content li {
+  margin: 8px 0;
+  padding-left: 8px;
+}

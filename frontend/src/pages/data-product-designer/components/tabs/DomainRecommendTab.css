@@ -1,0 +1,249 @@
+.domain-recommend-tab {
+  min-height: 100%;
+}
+
+.step-section {
+  margin-bottom: 48px;
+}
+
+.step-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.business-process-section {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.business-process-section .label {
+  color: rgba(226, 232, 240, 0.86);
+  margin-bottom: 12px;
+  display: block;
+  font-size: 14px;
+}
+
+.business-process-input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.business-process-actions {
+  margin-bottom: 16px;
+}
+
+.active-process-alert {
+  background: rgba(82, 196, 26, 0.25);
+  border-color: #52c41a;
+  color: #52c41a;
+}
+
+.products-alert {
+  margin-bottom: 24px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  border-color: rgba(0, 217, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.product-card.selected {
+  border-color: rgb(0, 217, 255);
+  background: rgba(0, 217, 255, 0.05);
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.product-layer {
+  font-size: 14px;
+  color: rgba(226, 232, 240, 0.86);
+  margin-bottom: 8px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.product-tag {
+  background: rgba(148, 163, 184, 0.3);
+  border-color: rgba(148, 163, 184, 0.6);
+  color: rgba(226, 232, 240, 0.86);
+  margin-left: 12px;
+}
+
+.product-actions {
+  margin-bottom: 16px;
+}
+
+.view-btn {
+  color: rgb(0, 217, 255);
+  padding: 0;
+}
+
+.product-details {
+  margin-bottom: 16px;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  padding-top: 16px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.details-header:hover {
+  color: rgb(0, 217, 255);
+}
+
+.expand-icon {
+  color: rgb(0, 217, 255);
+}
+
+.details-content {
+  margin-top: 12px;
+  padding-left: 16px;
+}
+
+.detail-item {
+  margin-bottom: 12px;
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.detail-item strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.source-info {
+  margin-top: 8px;
+}
+
+.table-info {
+  margin-bottom: 4px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.table-info code {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: rgb(0, 217, 255);
+}
+
+.product-checkbox {
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.product-details-modal .ant-modal-content {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.modal-content {
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.modal-section {
+  margin-bottom: 24px;
+}
+
+.modal-section h4 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.modal-section p {
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.6;
+}
+
+.source-tables h5 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.source-tables ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+.source-tables li {
+  margin-bottom: 4px;
+}
+
+.source-tables code {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: rgb(0, 217, 255);
+  font-size: 12px;
+}
+
+.columns-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.column-tag {
+  background: rgba(0, 217, 255, 0.3);
+  border-color: rgba(0, 217, 255, 0.6);
+  color: rgb(0, 217, 255);
+}
+

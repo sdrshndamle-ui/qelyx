@@ -1,0 +1,51 @@
+.data-product-designer-app {
+  min-height: 100vh;
+  background: #020617;
+}
+
+.app-sider {
+  background: rgba(15, 23, 42, 0.9);
+  border-right: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.app-menu {
+  height: 100%;
+  padding-top: 24px;
+  background: transparent;
+}
+
+.app-menu .ant-menu-item {
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.app-menu .ant-menu-item-selected {
+  background-color: rgba(0, 217, 255, 0.18) !important;
+  color: rgb(0, 217, 255) !important;
+}
+
+.app-menu .ant-menu-item-selected .ant-menu-title-content {
+  color: rgb(0, 217, 255) !important;
+}
+
+.app-menu .ant-menu-item-selected .anticon {
+  color: rgb(0, 217, 255) !important;
+}
+
+.app-menu .ant-menu-item .anticon {
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.app-menu .ant-menu-item:hover {
+  color: rgb(0, 217, 255);
+}
+
+.app-menu .ant-menu-item:hover .anticon {
+  color: rgb(0, 217, 255);
+}
+
+.app-content {
+  background: #020617;
+  padding: 24px;
+  overflow-y: auto;
+}
+

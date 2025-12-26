@@ -1,0 +1,180 @@
+.validate-objects {
+  width: 100%;
+}
+
+.validation-overview {
+  width: 100%;
+}
+
+.status-table-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.status-table-card :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.validation-status-table {
+  background: transparent;
+}
+
+.validation-status-table :global(.ant-table) {
+  background: transparent;
+}
+
+.validation-status-table :global(.ant-table-thead > tr > th) {
+  background: rgba(15, 23, 42, 0.95);
+  color: rgba(226, 232, 240, 0.9);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px;
+}
+
+.validation-status-table :global(.ant-table-tbody > tr > td) {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 16px;
+  padding: 16px;
+}
+
+.validation-status-table :global(.ant-table-tbody > tr:hover > td) {
+  background: rgba(0, 217, 255, 0.05);
+}
+
+.validation-status-table :global(.ant-select) {
+  width: 100%;
+}
+
+.validation-status-table :global(.ant-select-selector) {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.validation-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.validation-card :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.connection-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+.connection-card :global(.ant-card-head-title) {
+  color: rgba(226, 232, 240, 0.9);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.results-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  margin-top: 24px;
+}
+
+.results-card :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.validation-summary {
+  margin-bottom: 24px;
+}
+
+.validation-summary :global(.ant-statistic-title) {
+  color: #67e8f9 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.validation-summary :global(.ant-statistic-content) {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+}
+
+.validation-record-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+.validation-record-card :global(.ant-card-head-title) {
+  color: rgba(226, 232, 240, 0.9);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.validation-table {
+  background: transparent;
+}
+
+.validation-table :global(.ant-table) {
+  background: transparent;
+}
+
+.validation-table :global(.ant-table-thead > tr > th) {
+  background: rgba(15, 23, 42, 0.95);
+  color: rgba(226, 232, 240, 0.9);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+}
+
+.validation-table :global(.ant-table-tbody > tr > td) {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  padding: 12px;
+}
+
+.validation-table :global(.ant-table-tbody > tr:hover > td) {
+  background: rgba(0, 217, 255, 0.05);
+}
+
+.validation-table :global(.ant-radio-group) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.validation-table :global(.ant-radio-button-wrapper) {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.9);
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 12px;
+  padding: 4px 8px;
+  height: auto;
+  line-height: 1.4;
+}
+
+.validation-table :global(.ant-radio-button-wrapper:hover) {
+  border-color: #00d9ff;
+  color: #00d9ff;
+}
+
+.validation-table :global(.ant-radio-button-wrapper-checked) {
+  border-color: #00d9ff;
+  background: rgba(0, 217, 255, 0.15);
+}
+
+.validation-table :global(.ant-radio-button-wrapper-checked:hover) {
+  border-color: #00d9ff;
+  background: rgba(0, 217, 255, 0.2);
+}

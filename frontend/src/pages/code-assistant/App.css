@@ -1,0 +1,9 @@
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: #020617;
+}
+
+.app :global(.ant-layout-content) {
+  background: #020617;
+}

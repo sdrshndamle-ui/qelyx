@@ -1,0 +1,63 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Q circle with interconnected nodes -->
+  <g opacity="0.9">
+    <!-- Outer circle lines -->
+    <circle cx="60" cy="60" r="45" fill="none" stroke="#00d9ff" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="60" cy="60" r="38" fill="none" stroke="#00d9ff" stroke-width="1.2" opacity="0.5"/>
+    <circle cx="60" cy="60" r="32" fill="none" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    
+    <!-- Nodes on the Q circle -->
+    <circle cx="60" cy="15" r="3" fill="#00d9ff"/>
+    <circle cx="75" cy="25" r="3" fill="#00d9ff"/>
+    <circle cx="85" cy="40" r="3" fill="#00d9ff"/>
+    <circle cx="90" cy="60" r="3" fill="#00d9ff"/>
+    <circle cx="85" cy="80" r="3" fill="#00d9ff"/>
+    <circle cx="75" cy="95" r="3" fill="#00d9ff"/>
+    <circle cx="60" cy="105" r="3" fill="#00d9ff"/>
+    <circle cx="40" cy="95" r="3" fill="#00d9ff"/>
+    <circle cx="30" cy="80" r="3" fill="#00d9ff"/>
+    <circle cx="25" cy="60" r="3" fill="#00d9ff"/>
+    <circle cx="30" cy="40" r="3" fill="#00d9ff"/>
+    <circle cx="40" cy="25" r="3" fill="#00d9ff"/>
+    
+    <!-- Inner nodes -->
+    <circle cx="60" cy="50" r="2.5" fill="#00b8d4"/>
+    <circle cx="70" cy="55" r="2.5" fill="#00b8d4"/>
+    <circle cx="65" cy="70" r="2.5" fill="#00b8d4"/>
+    <circle cx="50" cy="70" r="2.5" fill="#00b8d4"/>
+    <circle cx="45" cy="55" r="2.5" fill="#00b8d4"/>
+    
+    <!-- Connection lines between nodes -->
+    <line x1="60" y1="15" x2="75" y2="25" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="75" y1="25" x2="85" y2="40" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="85" y1="40" x2="90" y2="60" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="90" y1="60" x2="85" y2="80" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="85" y1="80" x2="75" y2="95" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="75" y1="95" x2="60" y2="105" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="60" y1="105" x2="40" y2="95" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="40" y1="95" x2="30" y2="80" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="30" y1="80" x2="25" y2="60" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="25" y1="60" x2="30" y2="40" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="30" y1="40" x2="40" y2="25" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="40" y1="25" x2="60" y2="15" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    
+    <!-- Cross connections -->
+    <line x1="60" y1="15" x2="60" y2="50" stroke="#00d9ff" stroke-width="0.8" opacity="0.4"/>
+    <line x1="90" y1="60" x2="70" y2="55" stroke="#00d9ff" stroke-width="0.8" opacity="0.4"/>
+    <line x1="60" y1="105" x2="65" y2="70" stroke="#00d9ff" stroke-width="0.8" opacity="0.4"/>
+    <line x1="25" y1="60" x2="45" y2="55" stroke="#00d9ff" stroke-width="0.8" opacity="0.4"/>
+    
+    <!-- Q tail -->
+    <path d="M 75 95 Q 85 100 95 105 Q 100 110 105 115" fill="none" stroke="#00d9ff" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="95" cy="105" r="3" fill="#00d9ff"/>
+    <circle cx="105" cy="115" r="3" fill="#00d9ff"/>
+    <line x1="75" y1="95" x2="95" y2="105" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    <line x1="95" y1="105" x2="105" y2="115" stroke="#00d9ff" stroke-width="1" opacity="0.6"/>
+    
+    <!-- Additional connecting nodes on tail -->
+    <circle cx="88" cy="100" r="2" fill="#00b8d4"/>
+    <line x1="88" y1="100" x2="75" y2="95" stroke="#00d9ff" stroke-width="0.8" opacity="0.5"/>
+    <line x1="88" y1="100" x2="95" y2="105" stroke="#00d9ff" stroke-width="0.8" opacity="0.5"/>
+  </g>
+</svg>
+

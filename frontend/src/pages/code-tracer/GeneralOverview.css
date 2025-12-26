@@ -1,0 +1,83 @@
+.general-overview {
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 12px;
+}
+
+.overview-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.procedure-section {
+  margin-top: 24px;
+}
+
+.procedure-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(0, 217, 255);
+  margin-bottom: 16px;
+}
+
+.procedure-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(226, 232, 240, 0.78);
+  margin-bottom: 32px;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  border-color: rgba(0, 217, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  color: #020617;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.step-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(226, 232, 240, 0.78);
+}
+

@@ -1,0 +1,246 @@
+.rag-system-section {
+  width: 100%;
+  padding: 80px 24px;
+  background: #020617;
+}
+
+.rag-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.rag-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.rag-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.rag-subtitle {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.rag-content {
+  display: grid;
+  grid-template-columns: 1fr 650px;
+  gap: 80px;
+  align-items: start;
+}
+
+.rag-text-panel {
+  min-height: 500px;
+}
+
+.content-wrapper {
+  padding: 0;
+  background: transparent;
+}
+
+.content-header-label {
+  color: rgb(0, 217, 255);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.content-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.3;
+}
+
+.content-subtitle {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.content-description {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.content-description strong,
+.detail-item strong {
+  color: rgb(0, 217, 255);
+  font-weight: 500;
+}
+
+.content-details {
+  margin-top: 20px;
+}
+
+.detail-item {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  white-space: pre-wrap;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.rag-flywheel-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.flywheel-container {
+  width: 100%;
+  max-width: 455px;
+  aspect-ratio: 1;
+}
+
+.flywheel-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flywheel-segment {
+  fill: rgba(15, 23, 42, 0.9);
+  stroke: rgba(148, 163, 184, 0.3);
+  stroke-width: 2;
+  transition: all 0.3s ease;
+}
+
+.flywheel-segment:hover {
+  fill: rgba(0, 217, 255, 0.1);
+  stroke: rgba(0, 217, 255, 0.5);
+}
+
+.flywheel-segment.selected {
+  fill: rgb(0, 217, 255);
+  stroke: rgb(0, 217, 255);
+  stroke-width: 3;
+}
+
+.segment-label {
+  fill: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.segment-label.selected {
+  fill: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.center-circle {
+  fill: rgba(15, 23, 42, 0.95);
+  stroke: rgba(0, 217, 255, 0.5);
+  stroke-width: 2;
+}
+
+.center-text {
+  fill: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  text-anchor: middle;
+  letter-spacing: 1px;
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.nav-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: rgba(226, 232, 240, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nav-arrow-btn:hover {
+  background: rgba(0, 217, 255, 0.1);
+  border-color: rgb(0, 217, 255);
+  color: rgb(0, 217, 255);
+}
+
+@media (max-width: 1200px) {
+  .rag-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .rag-flywheel-panel {
+    order: -1;
+  }
+
+  .flywheel-container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rag-system-section {
+    padding: 40px 16px;
+  }
+
+  .rag-title {
+    font-size: 24px;
+  }
+
+  .rag-subtitle {
+    font-size: 14px;
+  }
+
+  .content-title {
+    font-size: 20px;
+  }
+
+  .flywheel-container {
+    max-width: 300px;
+  }
+
+  .segment-label {
+    font-size: 12px;
+  }
+
+  .center-text {
+    font-size: 12px;
+  }
+}
+

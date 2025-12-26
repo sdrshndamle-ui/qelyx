@@ -1,0 +1,48 @@
+.business-rules-view {
+  width: 100%;
+}
+
+.business-rules-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.business-rules-card :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.business-rules-content {
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.8;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.business-rules-content h1,
+.business-rules-content h2,
+.business-rules-content h3 {
+  color: #ffffff;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.business-rules-content h1 {
+  font-size: 24px;
+}
+
+.business-rules-content h2 {
+  font-size: 20px;
+}
+
+.business-rules-content h3 {
+  font-size: 16px;
+}
+
+.business-rules-content li {
+  margin: 8px 0;
+  padding-left: 8px;
+  list-style-type: decimal;
+  margin-left: 24px;
+}

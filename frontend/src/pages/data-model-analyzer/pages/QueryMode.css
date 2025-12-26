@@ -1,0 +1,52 @@
+.query-mode {
+  width: 100%;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header h2 {
+  margin-bottom: 12px;
+}
+
+.query-card {
+  margin-bottom: 24px;
+}
+
+.input-label {
+  display: block;
+  font-size: 13px;
+  color: rgba(226, 232, 240, 0.78);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-container p {
+  margin-top: 16px;
+  color: rgba(226, 232, 240, 0.78);
+}
+
+.analysis-card {
+  margin-bottom: 24px;
+}
+
+.analysis-card h4 {
+  margin-bottom: 16px;
+  color: rgb(0, 217, 255);
+}
+
+.results-card {
+  margin-bottom: 24px;
+}
+
+.results-card h4 {
+  margin-bottom: 16px;
+  color: rgb(0, 217, 255);
+}
+

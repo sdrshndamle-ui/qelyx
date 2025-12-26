@@ -1,8 +1,40 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import SolutioningApp from './SolutioningApp';
 
 const SolutionsSuitePage = () => {
+  // All hooks must be called at the top level, before any conditional returns
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
+
+  useEffect(() => {
+    const checkAuth = () => {
+      const authStatus = localStorage.getItem('qelyx_authenticated') === 'true';
+      const authTimestamp = localStorage.getItem('qelyx_auth_timestamp');
+      
+      if (authStatus && authTimestamp) {
+        const elapsed = Date.now() - parseInt(authTimestamp, 10);
+        const SESSION_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+        if (elapsed < SESSION_DURATION) {
+          setIsAuthenticated(true);
+          return;
+        }
+      }
+      setIsAuthenticated(false);
+    };
+
+    checkAuth();
+    // Check auth status periodically
+    const interval = setInterval(checkAuth, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // If authenticated, show SolutioningApp content
+  if (isAuthenticated) {
+    return <SolutioningApp />;
+  }
+
+  // Otherwise show the original content
 
   const solutions = [
     // Insurance Solutions

@@ -1,0 +1,111 @@
+.visualize-model-layout {
+  min-height: calc(100vh - 64px);
+  background: #020617;
+}
+
+.main-content-area {
+  padding: 0;
+  overflow: hidden;
+  background: #020617;
+}
+
+.flow-container {
+  width: 100%;
+  height: calc(100vh - 64px);
+  background: #020617;
+}
+
+.right-sidebar {
+  background: rgba(15, 23, 42, 0.9);
+  border-left: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.sidebar-card {
+  background: transparent;
+  border: none;
+}
+
+.chat-history {
+  padding: 8px;
+  background: rgba(2, 6, 23, 0.5);
+  border-radius: 6px;
+}
+
+.chat-message {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.chat-message.user {
+  background: rgba(0, 217, 255, 0.1);
+  border-left: 2px solid rgb(0, 217, 255);
+}
+
+.chat-message.assistant {
+  background: rgba(15, 23, 42, 0.9);
+  border-left: 2px solid rgba(148, 163, 184, 0.5);
+}
+
+/* React Flow Custom Styles */
+.react-flow__node {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.react-flow__node.selected {
+  border-color: rgb(0, 217, 255);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+.react-flow__edge {
+  stroke: rgb(0, 217, 255);
+}
+
+.react-flow__edge.selected {
+  stroke: rgb(0, 217, 255);
+  stroke-width: 2;
+}
+
+.react-flow__edge-path {
+  stroke: rgb(0, 217, 255);
+}
+
+.react-flow__edge-text {
+  fill: rgb(0, 217, 255);
+  font-size: 12px;
+}
+
+.react-flow__controls {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.react-flow__controls-button {
+  background: rgba(2, 6, 23, 0.9);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.react-flow__controls-button:hover {
+  background: rgba(0, 217, 255, 0.1);
+  color: rgb(0, 217, 255);
+}
+
+.react-flow__minimap {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.react-flow__panel {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 6px;
+  padding: 8px;
+}
+

@@ -1,0 +1,58 @@
+.enterprise-ontology-layout {
+  min-height: 100vh;
+  background: #0f172a;
+}
+
+.enterprise-ontology-layout .main-content-area {
+  padding: 24px;
+  background: #0f172a;
+}
+
+.enterprise-ontology-layout .right-sidebar {
+  background: rgba(15, 23, 42, 0.9);
+  border-left: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0;
+  overflow-y: auto;
+}
+
+.enterprise-ontology-layout .sidebar-card {
+  background: transparent;
+  border: none;
+  padding: 16px;
+}
+
+.enterprise-ontology-layout .ant-table {
+  background: rgba(15, 23, 42, 0.9);
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.enterprise-ontology-layout .ant-table-thead > tr > th {
+  background: rgba(2, 6, 23, 0.5);
+  color: rgba(226, 232, 240, 0.86);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.enterprise-ontology-layout .ant-table-tbody > tr > td {
+  background: rgba(15, 23, 42, 0.9);
+  color: rgba(226, 232, 240, 0.86);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.enterprise-ontology-layout .ant-table-tbody > tr:hover > td {
+  background: rgba(2, 6, 23, 0.5);
+}
+
+.enterprise-ontology-layout .ant-table-expanded-row > td {
+  background: rgba(2, 6, 23, 0.3);
+}
+
+.enterprise-ontology-layout .ant-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.enterprise-ontology-layout .ant-card-head-title {
+  color: rgba(226, 232, 240, 0.86);
+}
+

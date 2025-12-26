@@ -1,0 +1,116 @@
+.data-lineage {
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 12px;
+}
+
+.lineage-controls {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.control-section {
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.control-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.control-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(226, 232, 240, 0.78);
+  margin-bottom: 16px;
+}
+
+.range-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.range-inputs span {
+  color: rgba(226, 232, 240, 0.78);
+}
+
+.field-input {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.lineage-container {
+  display: flex;
+  gap: 24px;
+  height: 700px;
+}
+
+.lineage-graph {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.react-flow-container {
+  width: 100%;
+  height: 100%;
+}
+
+.react-flow-container .react-flow__node {
+  font-family: 'Inter', sans-serif;
+}
+
+.insights-panel {
+  width: 320px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.insights-panel .ant-card-head-title {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.field-info {
+  padding: 12px;
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 8px;
+}
+
+.field-info p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.field-info strong {
+  color: rgb(0, 217, 255);
+}
+
+@media (max-width: 1200px) {
+  .lineage-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .lineage-graph {
+    height: 600px;
+  }
+
+  .insights-panel {
+    width: 100%;
+  }
+}
+

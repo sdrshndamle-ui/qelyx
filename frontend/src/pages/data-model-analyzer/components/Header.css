@@ -1,0 +1,114 @@
+.app-header {
+  background: rgba(2, 6, 23, 0.96);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  overflow: visible;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  height: auto;
+  position: relative;
+  overflow: visible;
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 24px;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-text {
+  color: rgb(0, 217, 255);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.header-menu {
+  background: transparent;
+  border-bottom: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.header-menu .ant-menu-item {
+  color: rgba(226, 232, 240, 0.8);
+  border-bottom: 2px solid transparent;
+  margin: 0 8px;
+}
+
+.header-menu .ant-menu-item:hover {
+  color: rgb(0, 217, 255);
+  border-bottom-color: rgb(0, 217, 255);
+}
+
+.header-menu .ant-menu-item-selected {
+  color: rgb(0, 217, 255);
+  border-bottom-color: rgb(0, 217, 255);
+}
+
+.header-menu .ant-menu-item::after {
+  display: none;
+}
+
+.user-info {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.user-label {
+  color: rgba(226, 232, 240, 0.8);
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.user-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.username {
+  color: rgb(0, 217, 255);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.user-info .ant-avatar {
+  border: 1px solid rgba(0, 217, 255, 0.3);
+}
+

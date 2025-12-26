@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Demo - Qelyx</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .demo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .demo-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+        
+        .demo-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d9ff, #0099cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .demo-header p {
+            font-size: 1rem;
+            color: #a0a0a0;
+        }
+        
+        .module-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding: 10px 0;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 217, 255, 0.3) transparent;
+        }
+        
+        .module-tabs::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .module-tabs::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .module-tabs::-webkit-scrollbar-thumb {
+            background: rgba(0, 217, 255, 0.3);
+            border-radius: 3px;
+        }
+        
+        .module-tab {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+        
+        .module-tab:hover {
+            background: rgba(0, 217, 255, 0.1);
+            border-color: rgba(0, 217, 255, 0.4);
+        }
+        
+        .module-tab.active {
+            background: rgba(0, 217, 255, 0.2);
+            border-color: #00d9ff;
+            color: #00d9ff;
+            font-weight: 600;
+        }
+        
+        .demo-content-wrapper {
+            flex: 1;
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            min-height: 500px;
+        }
+        
+        .module-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .module-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .module-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .module-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #00d9ff;
+        }
+        
+        .module-header .module-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        
+        .module-header p {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+        
+        .module-section {
+            margin-bottom: 40px;
+        }
+        
+        .module-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #00d9ff;
+        }
+        
+        .module-section p {
+            color: #a0a0a0;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: #00d9ff;
+            box-shadow: 0 8px 24px rgba(0, 217, 255, 0.3);
+        }
+        
+        .feature-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #00d9ff;
+        }
+        
+        .feature-card p {
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .placeholder-box {
+            background: rgba(0, 217, 255, 0.1);
+            border: 2px dashed rgba(0, 217, 255, 0.3);
+            border-radius: 12px;
+            padding: 60px;
+            text-align: center;
+            color: #00d9ff;
+            font-size: 1.1rem;
+        }
+        
+        .navigation-arrows {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+        }
+        
+        .nav-arrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #00d9ff;
+            font-weight: 500;
+        }
+        
+        .nav-arrow:hover:not(.disabled) {
+            background: rgba(0, 217, 255, 0.2);
+            border-color: #00d9ff;
+            transform: translateX(5px);
+        }
+        
+        .nav-arrow.prev:hover:not(.disabled) {
+            transform: translateX(-5px);
+        }
+        
+        .nav-arrow.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .nav-arrow svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        
+        .module-counter {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(0, 217, 255, 0.2);
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-container {
+                padding: 10px;
+            }
+            
+            .demo-content-wrapper {
+                padding: 20px;
+            }
+            
+            .module-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navigation-arrows {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-arrow {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <span class="badge">PIPELINE DEMO</span>
+            <h1>Qelyx Pipeline Demonstration</h1>
+            <p>Navigate through your selected modules</p>
+        </div>
+        
+        <div class="module-tabs" id="moduleTabs"></div>
+        
+        <div class="demo-content-wrapper">
+            <div id="moduleContent"></div>
+            
+            <div class="navigation-arrows">
+                <button class="nav-arrow prev" id="prevBtn" onclick="navigateModule(-1)">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                    Previous Module
+                </button>
+                
+                <div class="module-counter" id="moduleCounter"></div>
+                
+                <button class="nav-arrow next" id="nextBtn" onclick="navigateModule(1)">
+                    Next Module
+                    <svg viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Module data - this would normally come from the URL parameters
+        const moduleData = {
+            'data-estate-assessment': {
+                icon: '📊',
+                title: 'Data Estate Assessment',
+                description: 'Evaluate database health, scalability, and modernization readiness.',
+                details: 'Comprehensive assessment of your data infrastructure, identifying bottlenecks, scalability issues, and modernization opportunities.',
+                features: [
+                    { title: 'Database Health Analysis', desc: 'Monitor database performance metrics, identify slow queries, and assess overall health status.' },
+                    { title: 'Scalability Assessment', desc: 'Evaluate current capacity and identify scaling opportunities for future growth.' },
+                    { title: 'Modernization Readiness', desc: 'Analyze technology stack and provide recommendations for modernization pathways.' }
+                ]
+            },
+            'application-structure-analysis': {
+                icon: '🔍',
+                title: 'Application Structure Analysis',
+                description: 'Reverse-engineer code to surface system structure and dependencies.',
+                details: 'Deep analysis of application architecture, code dependencies, and system relationships to inform modernization strategies.',
+                features: [
+                    { title: 'Code Structure Mapping', desc: 'Visualize application architecture and component relationships.' },
+                    { title: 'Dependency Analysis', desc: 'Identify dependencies between modules and external libraries.' },
+                    { title: 'System Relationships', desc: 'Map connections between different system components.' }
+                ]
+            },
+            'process-logic-lineage-mapping': {
+                icon: '🗺️',
+                title: 'Process & Logic Lineage Mapping',
+                description: 'Trace data flows, business logic, and process lineage for transparency.',
+                details: 'End-to-end visibility into data flows, transformations, and business logic across your entire data estate.',
+                features: [
+                    { title: 'Data Flow Tracing', desc: 'Track data movement from source to destination across systems.' },
+                    { title: 'Business Logic Mapping', desc: 'Document business rules and logic transformations.' },
+                    { title: 'Process Lineage', desc: 'Visualize complete process flows and dependencies.' }
+                ]
+            },
+            'integration-mapping-blueprint': {
+                icon: '🔗',
+                title: 'Integration Mapping Blueprint',
+                description: 'Align source-to-target mappings with integration patterns.',
+                details: 'Design comprehensive integration patterns and mappings between source systems and target architectures.',
+                features: [
+                    { title: 'Source-to-Target Mapping', desc: 'Define mappings between source and target data structures.' },
+                    { title: 'Integration Patterns', desc: 'Design and document integration patterns and best practices.' },
+                    { title: 'Architecture Alignment', desc: 'Ensure integration aligns with target architecture goals.' }
+                ]
+            },
+            'enterprise-data-model-design': {
+                icon: '🏗️',
+                title: 'Enterprise Data Model Design',
+                description: 'Craft canonical models to standardize analytics and operations.',
+                details: 'Create standardized, canonical data models that serve as the foundation for analytics and operations.',
+                features: [
+                    { title: 'Canonical Models', desc: 'Design standardized data models for enterprise-wide use.' },
+                    { title: 'Analytics Foundation', desc: 'Create models optimized for analytical workloads.' },
+                    { title: 'Operational Standards', desc: 'Establish data model standards for operational systems.' }
+                ]
+            },
+            'data-product-architecture': {
+                icon: '📦',
+                title: 'Data Product Architecture',
+                description: 'Design reusable data products with ownership, SLAs, and contracts.',
+                details: 'Architect data products as reusable assets with clear ownership, service level agreements, and contracts.',
+                features: [
+                    { title: 'Reusable Data Products', desc: 'Design data products that can be reused across the organization.' },
+                    { title: 'Ownership & SLAs', desc: 'Define clear ownership and service level agreements for data products.' },
+                    { title: 'Data Contracts', desc: 'Establish contracts that define data product interfaces and guarantees.' }
+                ]
+            },
+            'automated-code-modernization': {
+                icon: '⚙️',
+                title: 'Automated Code Modernization',
+                description: 'Plan automated conversions to modern languages, frameworks, and patterns.',
+                details: 'Automated transformation of legacy code to modern frameworks, languages, and architectural patterns.',
+                features: [
+                    { title: 'Language Migration', desc: 'Automated conversion to modern programming languages.' },
+                    { title: 'Framework Updates', desc: 'Transform legacy frameworks to modern alternatives.' },
+                    { title: 'Pattern Modernization', desc: 'Refactor code to follow modern architectural patterns.' }
+                ]
+            },
+            'ingestion-pipeline-orchestration': {
+                icon: '📥',
+                title: 'Ingestion Pipeline Orchestration',
+                description: 'Operationalize ingestion with scheduling, retries, and observability.',
+                details: 'Complete orchestration platform for data ingestion with scheduling, error handling, and full observability.',
+                features: [
+                    { title: 'Scheduling & Automation', desc: 'Schedule and automate data ingestion workflows.' },
+                    { title: 'Error Handling & Retries', desc: 'Robust error handling with automatic retry mechanisms.' },
+                    { title: 'Full Observability', desc: 'Complete visibility into ingestion pipeline performance and health.' }
+                ]
+            },
+            'secure-data-protection-services': {
+                icon: '🔒',
+                title: 'Secure Data Protection Services',
+                description: 'Encrypt, tokenize, and mask sensitive data across domains.',
+                details: 'Comprehensive data protection with encryption, tokenization, and masking capabilities across all data domains.',
+                features: [
+                    { title: 'Encryption Services', desc: 'End-to-end encryption for data at rest and in transit.' },
+                    { title: 'Tokenization', desc: 'Replace sensitive data with secure tokens.' },
+                    { title: 'Data Masking', desc: 'Mask sensitive information for non-production environments.' }
+                ]
+            },
+            'data-health-profiling-analytics': {
+                icon: '💊',
+                title: 'Data Health & Profiling Analytics',
+                description: 'Continuously assess data quality, drift, and anomalies.',
+                details: 'Real-time monitoring and analytics for data quality, schema drift detection, and anomaly identification.',
+                features: [
+                    { title: 'Data Quality Monitoring', desc: 'Continuous monitoring of data quality metrics.' },
+                    { title: 'Schema Drift Detection', desc: 'Automatically detect and alert on schema changes.' },
+                    { title: 'Anomaly Identification', desc: 'Identify unusual patterns and anomalies in data.' }
+                ]
+            },
+            'data-quality-assurance-hub': {
+                icon: '✅',
+                title: 'Data Quality Assurance Hub',
+                description: 'Centralize rules, thresholds, and remediation workflows.',
+                details: 'Centralized platform for defining, managing, and executing data quality rules and remediation processes.',
+                features: [
+                    { title: 'Quality Rules Management', desc: 'Define and manage data quality rules centrally.' },
+                    { title: 'Threshold Configuration', desc: 'Set and monitor quality thresholds and SLAs.' },
+                    { title: 'Remediation Workflows', desc: 'Automated workflows for data quality issue remediation.' }
+                ]
+            },
+            'issue-diagnostics-rca-engine': {
+                icon: '🔧',
+                title: 'Issue Diagnostics & RCA Engine',
+                description: 'Accelerate resolution with lineage-aware root cause analysis.',
+                details: 'Intelligent root cause analysis engine that leverages data lineage to quickly identify and resolve issues.',
+                features: [
+                    { title: 'Root Cause Analysis', desc: 'Intelligent analysis to identify root causes of data issues.' },
+                    { title: 'Lineage-Aware Diagnostics', desc: 'Leverage data lineage for comprehensive issue analysis.' },
+                    { title: 'Accelerated Resolution', desc: 'Fast identification and resolution of data problems.' }
+                ]
+            },
+            'data-standard-schema-harmonization': {
+                icon: '📐',
+                title: 'Data Standard & Schema Harmonization',
+                description: 'Normalize schemas and enforce standards across systems.',
+                details: 'Automated schema normalization and standardization across heterogeneous data sources and systems.',
+                features: [
+                    { title: 'Schema Normalization', desc: 'Automatically normalize schemas across different systems.' },
+                    { title: 'Standard Enforcement', desc: 'Enforce data standards and naming conventions.' },
+                    { title: 'Cross-System Harmonization', desc: 'Align schemas across heterogeneous data sources.' }
+                ]
+            },
+            'transformation-pipeline-studio': {
+                icon: '🎨',
+                title: 'Transformation Pipeline Studio',
+                description: 'Design, test, and deploy reusable transformation components.',
+                details: 'Visual studio for designing, testing, and deploying reusable data transformation pipelines and components.',
+                features: [
+                    { title: 'Visual Pipeline Design', desc: 'Drag-and-drop interface for designing transformation pipelines.' },
+                    { title: 'Component Testing', desc: 'Test transformation components before deployment.' },
+                    { title: 'Reusable Components', desc: 'Create and reuse transformation components across projects.' }
+                ]
+            },
+            'target-schema-model-definition': {
+                icon: '📋',
+                title: 'Target Schema & Model Definition',
+                description: 'Define target-state schema for operational and analytical layers.',
+                details: 'Define and manage target schemas for both operational and analytical data layers with version control.',
+                features: [
+                    { title: 'Target Schema Design', desc: 'Design target schemas for operational and analytical layers.' },
+                    { title: 'Model Definition', desc: 'Define data models with version control and governance.' },
+                    { title: 'Layer Management', desc: 'Manage schemas across operational and analytical layers.' }
+                ]
+            },
+            'data-reconciliation-validation': {
+                icon: '✓',
+                title: 'Data Reconciliation & Validation',
+                description: 'Verify completeness, accuracy, and consistency across hops.',
+                details: 'Automated reconciliation and validation processes to ensure data completeness and accuracy across systems.',
+                features: [
+                    { title: 'Data Reconciliation', desc: 'Automated reconciliation of data across systems.' },
+                    { title: 'Completeness Validation', desc: 'Verify data completeness across data hops.' },
+                    { title: 'Accuracy Checks', desc: 'Validate data accuracy and consistency.' }
+                ]
+            },
+            'operational-insights-intelligence': {
+                icon: '📊',
+                title: 'Operational Insights & Intelligence',
+                description: 'Deliver dashboards and alerts for data and process performance.',
+                details: 'Comprehensive dashboards and alerting system for monitoring data and process performance in real-time.',
+                features: [
+                    { title: 'Performance Dashboards', desc: 'Real-time dashboards for data and process performance.' },
+                    { title: 'Intelligent Alerts', desc: 'Smart alerting system for performance issues.' },
+                    { title: 'Operational Intelligence', desc: 'Actionable insights for operational excellence.' }
+                ]
+            },
+            'enterprise-master-data-hub': {
+                icon: '👑',
+                title: 'Enterprise Master Data Hub',
+                description: 'Centralize golden records with stewardship and survivorship.',
+                details: 'Centralized master data management with golden record creation, stewardship workflows, and survivorship rules.',
+                features: [
+                    { title: 'Golden Records', desc: 'Create and maintain golden records for master data.' },
+                    { title: 'Data Stewardship', desc: 'Workflow-based data stewardship and governance.' },
+                    { title: 'Survivorship Rules', desc: 'Automated survivorship rules for record consolidation.' }
+                ]
+            },
+            'sensitive-data-governance-center': {
+                icon: '🛡️',
+                title: 'Sensitive Data Governance Center',
+                description: 'Classify, protect, and audit sensitive data usage.',
+                details: 'Comprehensive governance platform for classifying, protecting, and auditing sensitive data across the enterprise.',
+                features: [
+                    { title: 'Data Classification', desc: 'Automated classification of sensitive data.' },
+                    { title: 'Protection Policies', desc: 'Define and enforce data protection policies.' },
+                    { title: 'Usage Auditing', desc: 'Comprehensive auditing of sensitive data access and usage.' }
+                ]
+            },
+            'operational-compliance-reporting': {
+                icon: '📄',
+                title: 'Operational & Compliance Reporting',
+                description: 'Standardized reporting for regulators and business leadership.',
+                details: 'Automated generation of operational and compliance reports for regulators and executive leadership.',
+                features: [
+                    { title: 'Compliance Reports', desc: 'Automated generation of regulatory compliance reports.' },
+                    { title: 'Operational Dashboards', desc: 'Executive dashboards for operational metrics.' },
+                    { title: 'Standardized Formats', desc: 'Consistent reporting formats across the organization.' }
+                ]
+            },
+            'end-to-end-process-monitoring': {
+                icon: '📈',
+                title: 'End-to-End Process Monitoring',
+                description: 'Track SLAs, dependencies, and health across pipelines.',
+                details: 'Comprehensive monitoring solution tracking SLAs, dependencies, and health metrics across all data pipelines.',
+                features: [
+                    { title: 'SLA Tracking', desc: 'Monitor and track service level agreements across pipelines.' },
+                    { title: 'Dependency Management', desc: 'Track dependencies between processes and pipelines.' },
+                    { title: 'Health Monitoring', desc: 'Real-time health monitoring of all data processes.' }
+                ]
+            }
+        };
+
+        let currentModules = [];
+        let currentIndex = 0;
+
+        // Parse URL parameters to get selected modules
+        function parseURLParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const modulesParam = urlParams.get('modules');
+            
+            if (modulesParam) {
+                // Split by comma and clean up module names
+                currentModules = modulesParam.split(',').map(m => m.trim().toLowerCase().replace(/\s+/g, '-'));
+            } else {
+                // Default: show all modules
+                currentModules = Object.keys(moduleData);
+            }
+        }
+
+        // Initialize the demo
+        function initDemo() {
+            parseURLParams();
+            
+            if (currentModules.length === 0) {
+                document.getElementById('moduleContent').innerHTML = `
+                    <div class="placeholder-box">
+                        <p>No modules selected</p>
+                        <p style="margin-top: 16px; font-size: 0.9rem; color: #a0a0a0;">
+                            Please select modules from the pipeline to view their demos.
+                        </p>
+                    </div>
+                `;
+                return;
+            }
+
+            renderTabs();
+            renderModule(currentIndex);
+            updateNavigation();
+        }
+
+        // Render module tabs
+        function renderTabs() {
+            const tabsContainer = document.getElementById('moduleTabs');
+            tabsContainer.innerHTML = '';
+            
+            currentModules.forEach((moduleKey, index) => {
+                const module = moduleData[moduleKey];
+                if (!module) return;
+                
+                const tab = document.createElement('div');
+                tab.className = `module-tab ${index === currentIndex ? 'active' : ''}`;
+                tab.textContent = module.title;
+                tab.onclick = () => switchModule(index);
+                tabsContainer.appendChild(tab);
+            });
+        }
+
+        // Render current module content
+        function renderModule(index) {
+            if (index < 0 || index >= currentModules.length) return;
+            
+            const moduleKey = currentModules[index];
+            const module = moduleData[moduleKey];
+            
+            if (!module) return;
+            
+            const contentContainer = document.getElementById('moduleContent');
+            contentContainer.innerHTML = `
+                <div class="module-content active">
+                    <div class="module-header">
+                        <div class="module-icon">${module.icon}</div>
+                        <h2>${module.title}</h2>
+                        <p>${module.description}</p>
+                    </div>
+                    
+                    <div class="module-section">
+                        <h3>Overview</h3>
+                        <p>${module.details}</p>
+                    </div>
+                    
+                    <div class="module-section">
+                        <h3>Key Features</h3>
+                        <div class="features-grid">
+                            ${module.features.map(feature => `
+                                <div class="feature-card">
+                                    <h4>${feature.title}</h4>
+                                    <p>${feature.desc}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="module-section">
+                        <h3>Interactive Demo</h3>
+                        <div class="placeholder-box">
+                            <p>${module.icon} Interactive Demo Interface</p>
+                            <p style="margin-top: 16px; font-size: 0.9rem; color: #a0a0a0;">
+                                This is a placeholder template. Replace with actual demo interface when ready.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            updateCounter();
+        }
+
+        // Switch to a specific module
+        function switchModule(index) {
+            if (index < 0 || index >= currentModules.length) return;
+            
+            currentIndex = index;
+            renderTabs();
+            renderModule(currentIndex);
+            updateNavigation();
+        }
+
+        // Navigate to next/previous module
+        function navigateModule(direction) {
+            const newIndex = currentIndex + direction;
+            if (newIndex >= 0 && newIndex < currentModules.length) {
+                switchModule(newIndex);
+            }
+        }
+
+        // Update navigation buttons
+        function updateNavigation() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            prevBtn.classList.toggle('disabled', currentIndex === 0);
+            nextBtn.classList.toggle('disabled', currentIndex === currentModules.length - 1);
+        }
+
+        // Update module counter
+        function updateCounter() {
+            const counter = document.getElementById('moduleCounter');
+            counter.textContent = `Module ${currentIndex + 1} of ${currentModules.length}`;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                navigateModule(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigateModule(1);
+            }
+        });
+
+        // Initialize on page load
+        initDemo();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,541 @@
+/* UX Comparison Styles - Matching First Image Design */
+.ux-comparison-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.ux-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  /* Center all columns vertically so Traditional vs Qelyx panels align */
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ux-side {
+  padding: 24px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.traditional-ux {
+  background: rgba(28, 36, 56, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.agentic-ux {
+  background: rgba(0, 217, 255, 0.08);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+}
+
+.ux-side-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  padding: 0;
+}
+
+.ux-user-section {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.ux-process-section {
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.ux-badges-section {
+  width: 100%;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.ux-user-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0;
+  min-height: 75px;
+  height: 75px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.ux-user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.ux-user-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.ux-laptop {
+  font-size: 1.2rem;
+  margin-top: -4px;
+  flex-shrink: 0;
+}
+
+.ux-thought-bubble {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text);
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  z-index: 5;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ux-thought-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(255, 255, 255, 0.1);
+}
+
+.thought-icon {
+  font-size: 1.2rem;
+}
+
+.thought-text {
+  font-weight: 600;
+}
+
+.ux-speech-bubble {
+  position: absolute;
+  top: -70px;
+  right: -20px;
+  background: rgba(0, 217, 255, 0.15);
+  border: 2px solid rgba(0, 217, 255, 0.4);
+  border-radius: 20px;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  color: var(--primary);
+  font-weight: 600;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 217, 255, 0.2);
+}
+
+.ux-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 30px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(0, 217, 255, 0.4);
+}
+
+.ux-ai-agent {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.ai-robot {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.1));
+  border: 2px solid rgba(0, 217, 255, 0.4);
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+  animation: float 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-50%) translateY(0);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-10px);
+  }
+}
+
+.ux-process-flow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  width: 100%;
+  /* Slightly taller container so step cards are not visually clipped */
+  padding: 18px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  min-height: 110px;
+  max-height: none;
+  overflow-x: auto;
+  overflow-y: visible;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.ux-process-flow::-webkit-scrollbar {
+  display: none;
+}
+
+.agentic-flow {
+  background: rgba(0, 217, 255, 0.05);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  min-height: 110px;
+  max-height: none;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 10px;
+  background: rgba(21, 27, 46, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 72px;
+  max-width: 82px;
+  height: 78px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  isolation: isolate;
+}
+
+.process-step.primary {
+  background: rgba(0, 217, 255, 0.12);
+  border: 1.5px solid rgba(0, 217, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.2);
+}
+
+.process-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 217, 255, 0.3);
+  z-index: 30;
+  position: relative;
+  isolation: isolate;
+}
+
+.process-icon {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.2;
+  max-width: 100%;
+  padding: 0 2px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.process-step.primary .process-label {
+  color: var(--primary);
+}
+
+.process-arrow {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 4px;
+  font-weight: 300;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.process-arrow-down {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin: 8px 0;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+}
+
+.process-arrow-loop {
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  margin: 0 8px;
+  opacity: 0.6;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ux-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  overflow: visible;
+  clear: both;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: 0;
+}
+
+.ux-badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.ux-badge.negative {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.ux-badge.positive {
+  background: rgba(0, 217, 255, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+}
+
+.ux-vs-divider {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.1));
+  border-radius: 50%;
+  border: 3px solid rgba(0, 217, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .ux-comparison {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .ux-vs-divider {
+    transform: rotate(90deg);
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .ux-ai-agent {
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+  }
+
+  .ux-speech-bubble {
+    top: -80px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ux-thought-bubble {
+    top: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ux-side {
+    padding: 14px 12px;
+    min-height: 200px;
+    gap: 10px;
+  }
+  
+  .ux-user-container {
+    min-height: 50px;
+    height: 50px;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .ux-process-flow {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    min-height: 60px;
+    max-height: 60px;
+    padding: 6px 4px;
+    gap: 2px;
+  }
+  
+  .process-step {
+    min-width: 55px;
+    max-width: 65px;
+    height: 52px;
+    padding: 5px 6px;
+    flex-shrink: 0;
+  }
+  
+  .process-label {
+    font-size: 0.55rem;
+  }
+  
+  .process-icon {
+    font-size: 1rem;
+  }
+  
+  .process-arrow {
+    font-size: 0.9rem;
+    width: 12px;
+  }
+
+  .ux-process-flow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+    margin: 4px 0;
+  }
+
+  .process-arrow-down {
+    transform: rotate(0deg);
+  }
+
+  .process-step {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .ux-user-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .ux-laptop {
+    font-size: 1.5rem;
+  }
+
+  .ai-robot {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+

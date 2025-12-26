@@ -1,0 +1,292 @@
+.design-sql-tab {
+  min-height: 100%;
+}
+
+.step-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.settings-bar {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.setting-item label {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.global-totals {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+}
+
+.total-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.total-label {
+  color: rgba(226, 232, 240, 0.78);
+  font-size: 12px;
+}
+
+.total-value {
+  color: rgb(0, 217, 255);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.design-artifacts-section {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.artifacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.artifacts-header h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.artifacts-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.artifacts-controls .ant-input {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.6) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.artifacts-controls .ant-input::placeholder {
+  color: rgba(148, 163, 184, 0.8) !important;
+}
+
+.artifacts-controls .ant-input:focus {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgb(0, 217, 255) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.45) !important;
+}
+
+.artifacts-controls .ant-input-affix-wrapper {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.6) !important;
+}
+
+.artifacts-controls .ant-input-affix-wrapper:hover {
+  border-color: rgb(0, 217, 255) !important;
+}
+
+.artifacts-controls .ant-input-affix-wrapper-focused {
+  border-color: rgb(0, 217, 255) !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.45) !important;
+}
+
+.artifacts-controls .anticon {
+  color: rgba(148, 163, 184, 0.8) !important;
+}
+
+.artifacts-controls .ant-input-affix-wrapper-focused .anticon {
+  color: rgb(0, 217, 255) !important;
+}
+
+.artifacts-controls .ant-input::selection {
+  background: rgba(0, 217, 255, 0.3) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.artifacts-controls .ant-input::-moz-selection {
+  background: rgba(0, 217, 255, 0.3) !important;
+  color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.product-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.product-filter-tag {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(148, 163, 184, 0.3);
+  border-color: rgba(148, 163, 184, 0.6);
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.product-filter-tag.active {
+  background: rgba(0, 217, 255, 0.3);
+  border-color: rgb(0, 217, 255);
+  color: rgb(0, 217, 255);
+}
+
+.filtered-totals {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.product-context {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.artifacts-tabs {
+  margin-bottom: 32px;
+}
+
+.cdes-list,
+.rules-list,
+.dq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.cde-card,
+.rule-card,
+.dq-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.cde-name,
+.rule-name,
+.dq-name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cde-rationale,
+.rule-description,
+.dq-description {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.dq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rule-sql,
+.dq-sql {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 6px;
+  color: rgb(0, 217, 255);
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.sql-generation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  margin-top: 32px;
+}
+
+.target-platform-info {
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 14px;
+}
+
+.generate-btn {
+  height: auto;
+  padding: 12px 24px;
+}
+
+.sql-success-alert {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.sql-output-container {
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.sql-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sql-output-header h4 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sql-output {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 6px;
+  padding: 16px;
+  color: rgb(0, 217, 255);
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-x: auto;
+  max-height: 600px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
